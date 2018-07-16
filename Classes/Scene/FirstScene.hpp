@@ -20,6 +20,14 @@ namespace project {
         static FirstScene* create();
         
         bool init() override;
+        bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event) override;
+        void onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event) override;
+        void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event) override;
+        
+        void initSettings();
+        void nextScene();
+        
+        
         
     public:
         static cocos2d::Scene* createScene();
