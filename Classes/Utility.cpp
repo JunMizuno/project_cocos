@@ -66,7 +66,7 @@ namespace project {
             std::discrete_distribution<T> dst;
             dst.param(decltype(dst.param())(prob.begin(), prob.end()));
             
-            T rndValue = dst(rng);
+            rndValue = dst(rng);
         }
         
         return rndValue;
