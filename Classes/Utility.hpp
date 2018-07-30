@@ -15,7 +15,10 @@ namespace project {
     class Utility {
     public:
         static int32_t getRandomValue(int32_t minimumValue, int32_t maximumValue);
-        static int32_t getRandomValue(std::vector<int32_t> valueAreaVector);
+        static float getRandomValue(float minimumValue, float maximumValue);
+        
+        template <typename T>
+        static T getRandomValue(std::vector<T> valueAreaVector);
         
         
         

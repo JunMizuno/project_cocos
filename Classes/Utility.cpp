@@ -15,7 +15,7 @@ namespace project {
     }
     
     /**
-     *
+     *  @brief ランダム値を取得
      */
     int32_t Utility::getRandomValue(int32_t minimumValue, int32_t maximumValue) {
         int32_t rndValue = 0;
@@ -26,30 +26,47 @@ namespace project {
             std::mt19937 rng(seed());
             std::uniform_int_distribution<> rndArea(minimumValue, maximumValue);
             
-            int32_t rndValue = rndArea(rng);
-            CCLOG("randValue:%d", rndValue);
+            rndValue = rndArea(rng);
+         }
+        
+        return rndValue;
+    }
+    
+    /**
+     *  @brief ランダム値を取得
+     */
+    float Utility::getRandomValue(float minimumValue, float maximumValue) {
+        float rndValue = 0.0f;
+        
+        // 確率
+        {
+            std::random_device seed;
+            std::mt19937 rng(seed());
+            std::uniform_real_distribution<> rndArea(minimumValue, maximumValue);
+            
+            rndValue = rndArea(rng);
         }
         
         return rndValue;
     }
     
     /**
-     *
+     *  @brief ランダム値を取得
      */
-    int32_t Utility::getRandomValue(std::vector<int32_t> valueAreaVector) {
-        int32_t rndValue = 0;
+    template <typename T>
+    T Utility::getRandomValue(std::vector<T> valueAreaVector) {
+        T rndValue;
         
         // 確率
         {
-            std::vector<int32_t> prob = valueAreaVector;
+            std::vector<T> prob = valueAreaVector;
             
             std::random_device seed;
             std::mt19937 rng(seed());
-            std::discrete_distribution<int32_t> dst;
+            std::discrete_distribution<T> dst;
             dst.param(decltype(dst.param())(prob.begin(), prob.end()));
             
-            int32_t rndValue = dst(rng);
-            CCLOG("randValue:%d", rndValue);
+            T rndValue = dst(rng);
         }
         
         return rndValue;
