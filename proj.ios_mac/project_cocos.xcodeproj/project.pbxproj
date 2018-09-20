@@ -66,6 +66,8 @@
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
 		CA21ED9520EF5B2F00C77819 /* FirstScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA21ED9320EF5B2F00C77819 /* FirstScene.cpp */; };
 		CA21ED9A20FCE6C500C77819 /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA21ED9820FCE6C500C77819 /* Utility.cpp */; };
+		CA21EDA02110547900C77819 /* GlobalDefine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA21ED9E2110547900C77819 /* GlobalDefine.cpp */; };
+		CA4193DC215323E8003B1E07 /* DrawCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4193DA215323E8003B1E07 /* DrawCircle.cpp */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
@@ -172,6 +174,10 @@
 		CA21ED9420EF5B2F00C77819 /* FirstScene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FirstScene.hpp; sourceTree = "<group>"; };
 		CA21ED9820FCE6C500C77819 /* Utility.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Utility.cpp; sourceTree = "<group>"; };
 		CA21ED9920FCE6C500C77819 /* Utility.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Utility.hpp; sourceTree = "<group>"; };
+		CA21ED9E2110547900C77819 /* GlobalDefine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GlobalDefine.cpp; sourceTree = "<group>"; };
+		CA21ED9F2110547900C77819 /* GlobalDefine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GlobalDefine.hpp; sourceTree = "<group>"; };
+		CA4193DA215323E8003B1E07 /* DrawCircle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DrawCircle.cpp; sourceTree = "<group>"; };
+		CA4193DB215323E8003B1E07 /* DrawCircle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DrawCircle.hpp; sourceTree = "<group>"; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -315,13 +321,14 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CA4193D8215323BE003B1E07 /* Utility */,
 				CA21ED8F20EF5B1400C77819 /* Scene */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
 				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
-				CA21ED9820FCE6C500C77819 /* Utility.cpp */,
-				CA21ED9920FCE6C500C77819 /* Utility.hpp */,
+				CA21ED9E2110547900C77819 /* GlobalDefine.cpp */,
+				CA21ED9F2110547900C77819 /* GlobalDefine.hpp */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -381,6 +388,17 @@
 				CA21ED9420EF5B2F00C77819 /* FirstScene.hpp */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		CA4193D8215323BE003B1E07 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				CA21ED9820FCE6C500C77819 /* Utility.cpp */,
+				CA21ED9920FCE6C500C77819 /* Utility.hpp */,
+				CA4193DA215323E8003B1E07 /* DrawCircle.cpp */,
+				CA4193DB215323E8003B1E07 /* DrawCircle.hpp */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -536,8 +554,10 @@
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				CA21EDA02110547900C77819 /* GlobalDefine.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				CA21ED9520EF5B2F00C77819 /* FirstScene.cpp in Sources */,
+				CA4193DC215323E8003B1E07 /* DrawCircle.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

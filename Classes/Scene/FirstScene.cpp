@@ -7,6 +7,7 @@
 
 #include "FirstScene.hpp"
 #include "Utility.hpp"
+#include "DrawCircle.hpp"
 
 USING_NS_CC;
 
@@ -27,8 +28,7 @@ namespace project {
             }
         }
         else {
-            delete pRet;
-            pRet = nullptr;
+            CC_SAFE_DELETE(pRet);
         }
         
         return pRet;
@@ -65,7 +65,7 @@ namespace project {
     }
     
     /**
-     *
+     *  @brief タッチ開始
      */
     bool FirstScene::onTouchBegan(Touch* touch, Event* event) {
         Utility::getRandomValue(1, 100);
@@ -74,14 +74,14 @@ namespace project {
     }
     
     /**
-     *
+     *  @brief タッチ移動
      */
     void FirstScene::onTouchMoved(Touch* touch, Event* event) {
         
     }
     
     /**
-     *
+     *  @brief タッチ終了
      */
     void FirstScene::onTouchEnded(Touch *touch, Event *event) {
         
@@ -96,20 +96,6 @@ namespace project {
             decltype(1+1) temp;
             temp = 1;
         }
-        
-        
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     }
     
     /**
