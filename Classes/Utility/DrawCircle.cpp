@@ -12,7 +12,6 @@ USING_NS_CC;
 namespace project {
     namespace {
         constexpr float EXCHANGE_DEGREE_RATE = 0.2777777;
-        // @memo. draw時に何故か角度が反転しているようなのでマイナスで調整
         constexpr int32_t ADJUST_DEGREE_VALUE = -90;
         constexpr int8_t TRIANGLE_VERTEX_COUNT = 3;
     }
@@ -23,7 +22,7 @@ namespace project {
     DrawCircle* DrawCircle::create() {
         DrawCircle* pRet = new (std::nothrow)DrawCircle();
         
-        if(pRet) {
+        if (pRet) {
             if(pRet->init()) {
                 pRet->autorelease();
             }
@@ -118,7 +117,6 @@ namespace project {
         int32_t exchangedEndDegree = static_cast<int32_t>(std::round(_endDegree)) + ADJUST_DEGREE_VALUE;
         
         for (int32_t degree = exchangedStartDegree; degree < exchangedEndDegree; degree++) {
-            // @memo. draw時に何故か角度が反転しているようなのでマイナスで調整
             float currentRadian = -CC_DEGREES_TO_RADIANS(degree);
             float nextRadian = -CC_DEGREES_TO_RADIANS(degree + 1);
             

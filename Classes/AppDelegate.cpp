@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
 #include "FirstScene.hpp"
+#include "TapjoyManager.hpp"
 
 // #define USE_AUDIO_ENGINE 1
 // #define USE_SIMPLE_AUDIO_ENGINE 1
@@ -92,6 +93,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
     }
 
     register_all_packages();
+    
+    // @memo. Tapjoyを有効かする場合はここで実行する
+    //TapjoyManager::getInstance()->init();
 
     // create a scene. it's an autorelease object
     auto scene = project::FirstScene::createScene();

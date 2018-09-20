@@ -27,6 +27,8 @@ import android.os.Bundle;
 import org.cocos2dx.lib.Cocos2dxActivity;
 
 public class AppActivity extends Cocos2dxActivity {
+    // Add for Tapjoy
+    public static native void setTapjoyActivity(Context context);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,7 @@ public class AppActivity extends Cocos2dxActivity {
         }
         // DO OTHER INITIALIZATION BELOW
         
+        // Add for Tapjoy
+        setTapjoyActivity(this.getApplicationContext());
     }
-
 }

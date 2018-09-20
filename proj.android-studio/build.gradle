@@ -17,3 +17,8 @@ allprojects {
         jcenter()
     }
 }
+
+// Add for Tapjoy
+dependencies {
+    Complite files('../../tapjoy_sdk/libs/tapjoyconnectlibrary.jar')
+}

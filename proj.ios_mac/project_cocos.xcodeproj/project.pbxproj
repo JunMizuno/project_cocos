@@ -68,6 +68,41 @@
 		CA21ED9A20FCE6C500C77819 /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA21ED9820FCE6C500C77819 /* Utility.cpp */; };
 		CA21EDA02110547900C77819 /* GlobalDefine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA21ED9E2110547900C77819 /* GlobalDefine.cpp */; };
 		CA4193DC215323E8003B1E07 /* DrawCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4193DA215323E8003B1E07 /* DrawCircle.cpp */; };
+		CA4193DF2153681C003B1E07 /* ProgressTimerSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4193DD2153681C003B1E07 /* ProgressTimerSprite.cpp */; };
+		CA4193E321537353003B1E07 /* TapjoyManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4193E121537353003B1E07 /* TapjoyManager.cpp */; };
+		CA4193E62153807A003B1E07 /* MyTJConnectListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4193E42153807A003B1E07 /* MyTJConnectListener.cpp */; };
+		CA4193E9215380F0003B1E07 /* MyTJPlacementListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4193E7215380F0003B1E07 /* MyTJPlacementListener.cpp */; };
+		CA4193EC21538160003B1E07 /* MyTJGetCurrencyBalanceListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4193EA21538160003B1E07 /* MyTJGetCurrencyBalanceListener.cpp */; };
+		CA4193EF215381A1003B1E07 /* MyTJSpendCurrencyListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4193ED215381A1003B1E07 /* MyTJSpendCurrencyListener.cpp */; };
+		CA4193F521538730003B1E07 /* Tapjoy.embeddedframework in Resources */ = {isa = PBXBuildFile; fileRef = CA4193F42153872F003B1E07 /* Tapjoy.embeddedframework */; };
+		CA4193F72153874D003B1E07 /* Tapjoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA4193F62153874C003B1E07 /* Tapjoy.framework */; };
+		CA4193F921539EBD003B1E07 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA4193F821539EBD003B1E07 /* AdSupport.framework */; };
+		CA4193FB21539EC8003B1E07 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA4193FA21539EC8003B1E07 /* CFNetwork.framework */; };
+		CA4193FD21539ED2003B1E07 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA4193FC21539ED2003B1E07 /* CoreData.framework */; };
+		CA41940221539EF3003B1E07 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA4193FE21539EF3003B1E07 /* CoreGraphics.framework */; };
+		CA41940321539EF3003B1E07 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA4193FF21539EF3003B1E07 /* CoreLocation.framework */; };
+		CA41940421539EF3003B1E07 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41940021539EF3003B1E07 /* CoreTelephony.framework */; };
+		CA41940521539EF3003B1E07 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41940121539EF3003B1E07 /* CoreMotion.framework */; };
+		CA41940E21539F46003B1E07 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41940621539F46003B1E07 /* ImageIO.framework */; };
+		CA41940F21539F46003B1E07 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41940721539F46003B1E07 /* libc++.tbd */; };
+		CA41941021539F46003B1E07 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41940821539F46003B1E07 /* libxml2.tbd */; };
+		CA41941121539F46003B1E07 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41940921539F46003B1E07 /* libz.tbd */; };
+		CA41941221539F46003B1E07 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41940A21539F46003B1E07 /* MapKit.framework */; };
+		CA41941321539F46003B1E07 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41940B21539F46003B1E07 /* libsqlite3.0.tbd */; };
+		CA41941421539F46003B1E07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41940C21539F46003B1E07 /* Foundation.framework */; };
+		CA41941521539F46003B1E07 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41940D21539F46003B1E07 /* MediaPlayer.framework */; };
+		CA41942121539F87003B1E07 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41941621539F86003B1E07 /* WebKit.framework */; };
+		CA41942221539F87003B1E07 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41941721539F86003B1E07 /* Social.framework */; };
+		CA41942321539F87003B1E07 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41941821539F86003B1E07 /* StoreKit.framework */; };
+		CA41942421539F87003B1E07 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41941921539F87003B1E07 /* MobileCoreServices.framework */; };
+		CA41942521539F87003B1E07 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41941A21539F87003B1E07 /* Security.framework */; };
+		CA41942621539F87003B1E07 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41941B21539F87003B1E07 /* PassKit.framework */; };
+		CA41942721539F87003B1E07 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41941C21539F87003B1E07 /* MessageUI.framework */; };
+		CA41942821539F87003B1E07 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41941D21539F87003B1E07 /* QuartzCore.framework */; };
+		CA41942921539F87003B1E07 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41941E21539F87003B1E07 /* Twitter.framework */; };
+		CA41942A21539F87003B1E07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41941F21539F87003B1E07 /* UIKit.framework */; };
+		CA41942B21539F87003B1E07 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41942021539F87003B1E07 /* SystemConfiguration.framework */; };
+		CA41942D21539FE2003B1E07 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41942C21539FE2003B1E07 /* JavaScriptCore.framework */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
@@ -178,6 +213,47 @@
 		CA21ED9F2110547900C77819 /* GlobalDefine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GlobalDefine.hpp; sourceTree = "<group>"; };
 		CA4193DA215323E8003B1E07 /* DrawCircle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DrawCircle.cpp; sourceTree = "<group>"; };
 		CA4193DB215323E8003B1E07 /* DrawCircle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DrawCircle.hpp; sourceTree = "<group>"; };
+		CA4193DD2153681C003B1E07 /* ProgressTimerSprite.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ProgressTimerSprite.cpp; sourceTree = "<group>"; };
+		CA4193DE2153681C003B1E07 /* ProgressTimerSprite.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ProgressTimerSprite.hpp; sourceTree = "<group>"; };
+		CA4193E121537353003B1E07 /* TapjoyManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TapjoyManager.cpp; sourceTree = "<group>"; };
+		CA4193E221537353003B1E07 /* TapjoyManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TapjoyManager.hpp; sourceTree = "<group>"; };
+		CA4193E42153807A003B1E07 /* MyTJConnectListener.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MyTJConnectListener.cpp; sourceTree = "<group>"; };
+		CA4193E52153807A003B1E07 /* MyTJConnectListener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MyTJConnectListener.hpp; sourceTree = "<group>"; };
+		CA4193E7215380F0003B1E07 /* MyTJPlacementListener.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MyTJPlacementListener.cpp; sourceTree = "<group>"; };
+		CA4193E8215380F0003B1E07 /* MyTJPlacementListener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MyTJPlacementListener.hpp; sourceTree = "<group>"; };
+		CA4193EA21538160003B1E07 /* MyTJGetCurrencyBalanceListener.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MyTJGetCurrencyBalanceListener.cpp; sourceTree = "<group>"; };
+		CA4193EB21538160003B1E07 /* MyTJGetCurrencyBalanceListener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MyTJGetCurrencyBalanceListener.hpp; sourceTree = "<group>"; };
+		CA4193ED215381A1003B1E07 /* MyTJSpendCurrencyListener.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MyTJSpendCurrencyListener.cpp; sourceTree = "<group>"; };
+		CA4193EE215381A1003B1E07 /* MyTJSpendCurrencyListener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MyTJSpendCurrencyListener.hpp; sourceTree = "<group>"; };
+		CA4193F42153872F003B1E07 /* Tapjoy.embeddedframework */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tapjoy.embeddedframework; sourceTree = "<group>"; };
+		CA4193F62153874C003B1E07 /* Tapjoy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Tapjoy.framework; path = Tapjoy.embeddedframework/Tapjoy.framework; sourceTree = "<group>"; };
+		CA4193F821539EBD003B1E07 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/AdSupport.framework; sourceTree = DEVELOPER_DIR; };
+		CA4193FA21539EC8003B1E07 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		CA4193FC21539ED2003B1E07 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		CA4193FE21539EF3003B1E07 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		CA4193FF21539EF3003B1E07 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		CA41940021539EF3003B1E07 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
+		CA41940121539EF3003B1E07 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		CA41940621539F46003B1E07 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		CA41940721539F46003B1E07 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
+		CA41940821539F46003B1E07 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/usr/lib/libxml2.tbd; sourceTree = DEVELOPER_DIR; };
+		CA41940921539F46003B1E07 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
+		CA41940A21539F46003B1E07 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
+		CA41940B21539F46003B1E07 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/usr/lib/libsqlite3.0.tbd; sourceTree = DEVELOPER_DIR; };
+		CA41940C21539F46003B1E07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CA41940D21539F46003B1E07 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
+		CA41941621539F86003B1E07 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+		CA41941721539F86003B1E07 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Social.framework; sourceTree = DEVELOPER_DIR; };
+		CA41941821539F86003B1E07 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
+		CA41941921539F87003B1E07 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		CA41941A21539F87003B1E07 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		CA41941B21539F87003B1E07 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/PassKit.framework; sourceTree = DEVELOPER_DIR; };
+		CA41941C21539F87003B1E07 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
+		CA41941D21539F87003B1E07 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		CA41941E21539F87003B1E07 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Twitter.framework; sourceTree = DEVELOPER_DIR; };
+		CA41941F21539F87003B1E07 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		CA41942021539F87003B1E07 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		CA41942C21539FE2003B1E07 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -191,6 +267,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA41942D21539FE2003B1E07 /* JavaScriptCore.framework in Frameworks */,
+				CA41942121539F87003B1E07 /* WebKit.framework in Frameworks */,
+				CA41942221539F87003B1E07 /* Social.framework in Frameworks */,
+				CA41942321539F87003B1E07 /* StoreKit.framework in Frameworks */,
+				CA41942421539F87003B1E07 /* MobileCoreServices.framework in Frameworks */,
+				CA41942521539F87003B1E07 /* Security.framework in Frameworks */,
+				CA41942621539F87003B1E07 /* PassKit.framework in Frameworks */,
+				CA41942721539F87003B1E07 /* MessageUI.framework in Frameworks */,
+				CA41942821539F87003B1E07 /* QuartzCore.framework in Frameworks */,
+				CA41942921539F87003B1E07 /* Twitter.framework in Frameworks */,
+				CA41942A21539F87003B1E07 /* UIKit.framework in Frameworks */,
+				CA41942B21539F87003B1E07 /* SystemConfiguration.framework in Frameworks */,
+				CA41940E21539F46003B1E07 /* ImageIO.framework in Frameworks */,
+				CA41940F21539F46003B1E07 /* libc++.tbd in Frameworks */,
+				CA41941021539F46003B1E07 /* libxml2.tbd in Frameworks */,
+				CA41941121539F46003B1E07 /* libz.tbd in Frameworks */,
+				CA41941221539F46003B1E07 /* MapKit.framework in Frameworks */,
+				CA41941321539F46003B1E07 /* libsqlite3.0.tbd in Frameworks */,
+				CA41941421539F46003B1E07 /* Foundation.framework in Frameworks */,
+				CA41941521539F46003B1E07 /* MediaPlayer.framework in Frameworks */,
+				CA41940221539EF3003B1E07 /* CoreGraphics.framework in Frameworks */,
+				CA41940321539EF3003B1E07 /* CoreLocation.framework in Frameworks */,
+				CA41940421539EF3003B1E07 /* CoreTelephony.framework in Frameworks */,
+				CA41940521539EF3003B1E07 /* CoreMotion.framework in Frameworks */,
+				CA4193FD21539ED2003B1E07 /* CoreData.framework in Frameworks */,
+				CA4193FB21539EC8003B1E07 /* CFNetwork.framework in Frameworks */,
+				CA4193F921539EBD003B1E07 /* AdSupport.framework in Frameworks */,
+				CA4193F72153874D003B1E07 /* Tapjoy.framework in Frameworks */,
 				294D0D641D0D56D500F7F5D4 /* CoreText.framework in Frameworks */,
 				ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */,
 				52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */,
@@ -267,6 +371,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				CA4193F42153872F003B1E07 /* Tapjoy.embeddedframework */,
 				46880B8319C43A87006E1F66 /* Classes */,
 				46880B7519C43A67006E1F66 /* Resources */,
 				1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */,
@@ -281,6 +386,34 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA41942C21539FE2003B1E07 /* JavaScriptCore.framework */,
+				CA41941C21539F87003B1E07 /* MessageUI.framework */,
+				CA41941921539F87003B1E07 /* MobileCoreServices.framework */,
+				CA41941B21539F87003B1E07 /* PassKit.framework */,
+				CA41941D21539F87003B1E07 /* QuartzCore.framework */,
+				CA41941A21539F87003B1E07 /* Security.framework */,
+				CA41941721539F86003B1E07 /* Social.framework */,
+				CA41941821539F86003B1E07 /* StoreKit.framework */,
+				CA41942021539F87003B1E07 /* SystemConfiguration.framework */,
+				CA41941E21539F87003B1E07 /* Twitter.framework */,
+				CA41941F21539F87003B1E07 /* UIKit.framework */,
+				CA41941621539F86003B1E07 /* WebKit.framework */,
+				CA41940C21539F46003B1E07 /* Foundation.framework */,
+				CA41940621539F46003B1E07 /* ImageIO.framework */,
+				CA41940721539F46003B1E07 /* libc++.tbd */,
+				CA41940B21539F46003B1E07 /* libsqlite3.0.tbd */,
+				CA41940821539F46003B1E07 /* libxml2.tbd */,
+				CA41940921539F46003B1E07 /* libz.tbd */,
+				CA41940A21539F46003B1E07 /* MapKit.framework */,
+				CA41940D21539F46003B1E07 /* MediaPlayer.framework */,
+				CA4193FE21539EF3003B1E07 /* CoreGraphics.framework */,
+				CA4193FF21539EF3003B1E07 /* CoreLocation.framework */,
+				CA41940121539EF3003B1E07 /* CoreMotion.framework */,
+				CA41940021539EF3003B1E07 /* CoreTelephony.framework */,
+				CA4193FC21539ED2003B1E07 /* CoreData.framework */,
+				CA4193FA21539EC8003B1E07 /* CFNetwork.framework */,
+				CA4193F821539EBD003B1E07 /* AdSupport.framework */,
+				CA4193F62153874C003B1E07 /* Tapjoy.framework */,
 				294D0D631D0D56D500F7F5D4 /* CoreText.framework */,
 				ED545A7D1B68A1FA00C3958E /* libiconv.dylib */,
 				ED545A7B1B68A1F400C3958E /* libiconv.dylib */,
@@ -321,6 +454,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CA4193E02153733A003B1E07 /* Tapjoy */,
 				CA4193D8215323BE003B1E07 /* Utility */,
 				CA21ED8F20EF5B1400C77819 /* Scene */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
@@ -397,8 +531,27 @@
 				CA21ED9920FCE6C500C77819 /* Utility.hpp */,
 				CA4193DA215323E8003B1E07 /* DrawCircle.cpp */,
 				CA4193DB215323E8003B1E07 /* DrawCircle.hpp */,
+				CA4193DD2153681C003B1E07 /* ProgressTimerSprite.cpp */,
+				CA4193DE2153681C003B1E07 /* ProgressTimerSprite.hpp */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		CA4193E02153733A003B1E07 /* Tapjoy */ = {
+			isa = PBXGroup;
+			children = (
+				CA4193E121537353003B1E07 /* TapjoyManager.cpp */,
+				CA4193E221537353003B1E07 /* TapjoyManager.hpp */,
+				CA4193E42153807A003B1E07 /* MyTJConnectListener.cpp */,
+				CA4193E52153807A003B1E07 /* MyTJConnectListener.hpp */,
+				CA4193E7215380F0003B1E07 /* MyTJPlacementListener.cpp */,
+				CA4193E8215380F0003B1E07 /* MyTJPlacementListener.hpp */,
+				CA4193EA21538160003B1E07 /* MyTJGetCurrencyBalanceListener.cpp */,
+				CA4193EB21538160003B1E07 /* MyTJGetCurrencyBalanceListener.hpp */,
+				CA4193ED215381A1003B1E07 /* MyTJSpendCurrencyListener.cpp */,
+				CA4193EE215381A1003B1E07 /* MyTJSpendCurrencyListener.hpp */,
+			);
+			path = Tapjoy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -524,6 +677,7 @@
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
+				CA4193F521538730003B1E07 /* Tapjoy.embeddedframework in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 			);
@@ -550,14 +704,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA21ED9A20FCE6C500C77819 /* Utility.cpp in Sources */,
+				CA4193EF215381A1003B1E07 /* MyTJSpendCurrencyListener.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
+				CA4193E9215380F0003B1E07 /* MyTJPlacementListener.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				CA4193E62153807A003B1E07 /* MyTJConnectListener.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				CA21EDA02110547900C77819 /* GlobalDefine.cpp in Sources */,
+				CA4193E321537353003B1E07 /* TapjoyManager.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				CA21ED9520EF5B2F00C77819 /* FirstScene.cpp in Sources */,
 				CA4193DC215323E8003B1E07 /* DrawCircle.cpp in Sources */,
+				CA4193EC21538160003B1E07 /* MyTJGetCurrencyBalanceListener.cpp in Sources */,
+				CA4193DF2153681C003B1E07 /* ProgressTimerSprite.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +754,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Tapjoy.embeddedframework",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -627,6 +791,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Tapjoy.embeddedframework",
+				);
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ios/Prefix.pch;
