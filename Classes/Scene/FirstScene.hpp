@@ -14,6 +14,9 @@ namespace project {
      */
     class FirstScene final : public cocos2d::Layer {
     private:
+        int32_t tmpCount_{0};
+        
+    private:
         FirstScene() = default;
         virtual ~FirstScene() = default;
         

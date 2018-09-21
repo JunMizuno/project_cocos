@@ -26,11 +26,13 @@ namespace project {
         void initSettings(cocos2d::Sprite* _sprite);
         
     public:
-        ProgressTimerSprite* create(const std::string _filePath);
-        ProgressTimerSprite* create(cocos2d::Sprite* _sprite);
+        static ProgressTimerSprite* create(const std::string _filePath);
+        static ProgressTimerSprite* create(cocos2d::Sprite* _sprite);
         
-        void setBarType(cocos2d::ProgressTimer::Type _typr);
+        void setBarType(cocos2d::ProgressTimer::Type _type);
+        void setRotation(float rotate);
         float getPercentage();
+        void setPercentage(float persent);
     };
 }
 

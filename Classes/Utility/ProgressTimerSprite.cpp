@@ -67,26 +67,50 @@ namespace project {
      *  @brief 初期設定
      */
     void ProgressTimerSprite::initSettings(cocos2d::Sprite* _sprite) {
+        this->setCascadeOpacityEnabled(true);
+        this->setCascadeColorEnabled(true);
+        
         pProgressTimer_ = ProgressTimer::create(_sprite);
         pProgressTimer_->setPosition({0.0f, 0.0f});
         this->addChild(pProgressTimer_);
-        
-        
-        
-        
     }
     
     /**
-     *  @brief
+     *  @brief 表示タイプを設定
+     *  @detail RADIALかBARかのどちらか
      */
-    void ProgressTimerSprite::setBarType(cocos2d::ProgressTimer::Type _typr) {
-        
+    void ProgressTimerSprite::setBarType(cocos2d::ProgressTimer::Type _type) {
+        if (pProgressTimer_) {
+            pProgressTimer_->setType(_type);
+        }
     }
     
     /**
-     *  @brief
+     *  @brief 角度を設定
+     */
+    void ProgressTimerSprite::setRotation(float rotate) {
+        if (pProgressTimer_) {
+            pProgressTimer_->setRotation(rotate);
+        }
+    }
+    
+    /**
+     *  @brief パーセンテージを取得
      */
     float ProgressTimerSprite::getPercentage() {
+        if (pProgressTimer_) {
+            pProgressTimer_->getPercentage();
+        }
         
+        return 0.0f;
+    }
+    
+    /**
+     *  @brief パーセンテージを設定
+     */
+    void ProgressTimerSprite::setPercentage(float percent) {
+        if (pProgressTimer_) {
+            pProgressTimer_->setPercentage(percent);
+        }
     }
 }

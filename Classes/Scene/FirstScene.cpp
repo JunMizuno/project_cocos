@@ -7,7 +7,6 @@
 
 #include "FirstScene.hpp"
 #include "Utility.hpp"
-#include "DrawCircle.hpp"
 
 USING_NS_CC;
 
