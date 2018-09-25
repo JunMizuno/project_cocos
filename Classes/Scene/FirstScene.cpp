@@ -94,9 +94,7 @@ namespace project {
         {
             decltype(1+1) temp;
             temp = 1;
-        }
-        
-        Utility::createDisableTouchArea(this);
+        }        
     }
     
     /**
