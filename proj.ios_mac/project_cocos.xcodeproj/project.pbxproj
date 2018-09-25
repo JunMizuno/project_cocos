@@ -103,6 +103,7 @@
 		CA41942A21539F87003B1E07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41941F21539F87003B1E07 /* UIKit.framework */; };
 		CA41942B21539F87003B1E07 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41942021539F87003B1E07 /* SystemConfiguration.framework */; };
 		CA41942D21539FE2003B1E07 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41942C21539FE2003B1E07 /* JavaScriptCore.framework */; };
+		CAD518AC2159E38F00E1AB1C /* json11.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAD518AB2159E38F00E1AB1C /* json11.cpp */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
@@ -254,6 +255,8 @@
 		CA41941F21539F87003B1E07 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		CA41942021539F87003B1E07 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		CA41942C21539FE2003B1E07 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		CAD518AA2159E38F00E1AB1C /* json11.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = json11.hpp; sourceTree = "<group>"; };
+		CAD518AB2159E38F00E1AB1C /* json11.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json11.cpp; sourceTree = "<group>"; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -527,6 +530,7 @@
 		CA4193D8215323BE003B1E07 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				CAD518A52159E0ED00E1AB1C /* json11 */,
 				CA21ED9820FCE6C500C77819 /* Utility.cpp */,
 				CA21ED9920FCE6C500C77819 /* Utility.hpp */,
 				CA4193DA215323E8003B1E07 /* DrawCircle.cpp */,
@@ -552,6 +556,15 @@
 				CA4193EE215381A1003B1E07 /* MyTJSpendCurrencyListener.hpp */,
 			);
 			path = Tapjoy;
+			sourceTree = "<group>";
+		};
+		CAD518A52159E0ED00E1AB1C /* json11 */ = {
+			isa = PBXGroup;
+			children = (
+				CAD518AB2159E38F00E1AB1C /* json11.cpp */,
+				CAD518AA2159E38F00E1AB1C /* json11.hpp */,
+			);
+			path = json11;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -710,6 +723,7 @@
 				CA4193E9215380F0003B1E07 /* MyTJPlacementListener.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				CA4193E62153807A003B1E07 /* MyTJConnectListener.cpp in Sources */,
+				CAD518AC2159E38F00E1AB1C /* json11.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				CA21EDA02110547900C77819 /* GlobalDefine.cpp in Sources */,
 				CA4193E321537353003B1E07 /* TapjoyManager.cpp in Sources */,

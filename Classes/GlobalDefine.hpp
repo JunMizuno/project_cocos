@@ -8,6 +8,10 @@
 #ifndef GlobalDefine_hpp
 #define GlobalDefine_hpp
 
+#include "cocos2d.h"
+
+#define FPS (60)
+
 class GlobalDefine {
 public:
     

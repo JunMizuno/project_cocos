@@ -12,7 +12,7 @@
 
 namespace project {
     /**
-     *  @brief
+     *  @brief 時間経過演出の画像を生成
      */
     class ProgressTimerSprite : public cocos2d::Node {
     private:
