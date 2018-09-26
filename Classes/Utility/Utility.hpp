@@ -16,11 +16,15 @@ namespace project {
      */
     class Utility {
     public:
+        static std::mt19937& getMt();
         static int32_t getRandomValue(int32_t _minimumValue, int32_t _maximumValue);
         static float getRandomValue(float _minimumValue, float _maximumValue);
         
         template <typename T>
         static T getRandomValue(std::vector<T> _valueAreaVector);
+        
+        template <typename EnumType>
+        static typename std::underlying_type<EnumType>::type enumToValue(EnumType _enum);
         
         static float getTwoPointBetweenDistance(cocos2d::Vec2 _v1, cocos2d::Vec2 _v2);
         static float getTowPointBetweenAngle(cocos2d::Vec2 _v1, cocos2d::Vec2 _v2);

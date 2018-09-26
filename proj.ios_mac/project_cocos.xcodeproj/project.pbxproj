@@ -104,6 +104,8 @@
 		CA41942B21539F87003B1E07 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41942021539F87003B1E07 /* SystemConfiguration.framework */; };
 		CA41942D21539FE2003B1E07 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41942C21539FE2003B1E07 /* JavaScriptCore.framework */; };
 		CAD518AC2159E38F00E1AB1C /* json11.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAD518AB2159E38F00E1AB1C /* json11.cpp */; };
+		CAD518AF215A011300E1AB1C /* SequenceEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAD518AD215A011300E1AB1C /* SequenceEvent.cpp */; };
+		CAD518B2215A0C6800E1AB1C /* EventsSequence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAD518B0215A0C6800E1AB1C /* EventsSequence.cpp */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
@@ -257,6 +259,10 @@
 		CA41942C21539FE2003B1E07 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		CAD518AA2159E38F00E1AB1C /* json11.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = json11.hpp; sourceTree = "<group>"; };
 		CAD518AB2159E38F00E1AB1C /* json11.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json11.cpp; sourceTree = "<group>"; };
+		CAD518AD215A011300E1AB1C /* SequenceEvent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SequenceEvent.cpp; sourceTree = "<group>"; };
+		CAD518AE215A011300E1AB1C /* SequenceEvent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SequenceEvent.hpp; sourceTree = "<group>"; };
+		CAD518B0215A0C6800E1AB1C /* EventsSequence.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EventsSequence.cpp; sourceTree = "<group>"; };
+		CAD518B1215A0C6800E1AB1C /* EventsSequence.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EventsSequence.hpp; sourceTree = "<group>"; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -537,6 +543,10 @@
 				CA4193DB215323E8003B1E07 /* DrawCircle.hpp */,
 				CA4193DD2153681C003B1E07 /* ProgressTimerSprite.cpp */,
 				CA4193DE2153681C003B1E07 /* ProgressTimerSprite.hpp */,
+				CAD518AD215A011300E1AB1C /* SequenceEvent.cpp */,
+				CAD518AE215A011300E1AB1C /* SequenceEvent.hpp */,
+				CAD518B0215A0C6800E1AB1C /* EventsSequence.cpp */,
+				CAD518B1215A0C6800E1AB1C /* EventsSequence.hpp */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -719,8 +729,10 @@
 				CA21ED9A20FCE6C500C77819 /* Utility.cpp in Sources */,
 				CA4193EF215381A1003B1E07 /* MyTJSpendCurrencyListener.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				CAD518B2215A0C6800E1AB1C /* EventsSequence.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				CA4193E9215380F0003B1E07 /* MyTJPlacementListener.cpp in Sources */,
+				CAD518AF215A011300E1AB1C /* SequenceEvent.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				CA4193E62153807A003B1E07 /* MyTJConnectListener.cpp in Sources */,
 				CAD518AC2159E38F00E1AB1C /* json11.cpp in Sources */,

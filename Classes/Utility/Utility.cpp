@@ -23,6 +23,15 @@ namespace project {
     }
     
     /**
+     *  @brief 擬似乱数を生成・取得
+     */
+    std::mt19937& Utility::getMt() {
+        static std::random_device rnd;
+        static std::mt19937 mt(rnd());
+        return mt;
+    }
+    
+    /**
      *  @brief ランダム値を取得
      */
     int32_t Utility::getRandomValue(int32_t _minimumValue, int32_t _maximumValue) {
@@ -78,6 +87,14 @@ namespace project {
         }
         
         return rndValue;
+    }
+    
+    /**
+     *  @brief enumを数値に変換
+     */
+    template <typename EnumType>
+    typename std::underlying_type<EnumType>::type Utility::enumToValue(EnumType _enum) {
+        return static_cast<typename std::underlying_type<EnumType>::type>(_enum);
     }
     
     /**
