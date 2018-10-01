@@ -14,6 +14,9 @@ namespace project {
         constexpr float NO_ACTION_SCROLL_DURATION = 0.0001f;
         constexpr float PAGE_JUMP_EASE_RATE = 2.0f;
         constexpr char UPDATE_SCROLL_INDEX_TAG[] = "update_scroll_index";
+        constexpr float SCROLL_MAX_PERCENTAGE = 100.0f;
+        constexpr float ITEMS_MAX_SCALE = 1.0f;
+        constexpr float ITEMS_MIN_SCALE = 0.8f;
     }
     
     /**
@@ -633,5 +636,28 @@ namespace project {
      */
     void CommonListView::doLayout() {
         listView_->doLayout();
+    }
+    
+    /**
+     *  @brief スクロール時のアイテムのスケールを更新
+     *  @detail プロジェクトによっては仕様が合わない可能性あり
+     *  @detail 座標を調整しないといけなくなるはずなので、以降アイテムの基本座標やサイズを渡すなどして要調整
+     */
+    void CommonListView::refreshViewItemsScale() {
+        int32_t maxIndex = static_cast<int32_t>(listView_->getItems().size()) - 1;
+        if (maxIndex <= 0) {
+            return;
+        }
+        
+        for (int32_t index = 0; index <= maxIndex; index++) {
+            float onesPercent = SCROLL_MAX_PERCENTAGE / static_cast<float>(maxIndex);
+            float itemPercent = (SCROLL_MAX_PERCENTAGE * index) / static_cast<float>(maxIndex);
+            float distance = std::min(fabsf(itemPercent - this->getPercentage()), onesPercent);
+            float scale = (ITEMS_MAX_SCALE + ((ITEMS_MIN_SCALE - ITEMS_MAX_SCALE) * (distance / onesPercent)));
+            auto item = this->getItem(index);
+            if (item) {
+                item->setScale(scale);
+            }
+        }
     }
 }

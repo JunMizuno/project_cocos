@@ -80,6 +80,7 @@ namespace project {
         inline cocos2d::Vec2 getMoveDiffPos() const { return moveDiffPos_; }
         cocos2d::Size getInnerContainerSize() const;
         void doLayout();
+        void refreshViewItemsScale();
     };
 }
 
