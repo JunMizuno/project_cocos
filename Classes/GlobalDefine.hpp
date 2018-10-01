@@ -17,4 +17,8 @@ public:
     
 };
 
+namespace project {
+    constexpr int32_t COMMON_SKELTON_OPACITY = 128;
+}
+
 #endif /* GlobalDefine_hpp */

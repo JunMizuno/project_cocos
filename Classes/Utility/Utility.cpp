@@ -114,7 +114,7 @@ namespace project {
     /**
      *  @brief フレームを秒にして返す
      */
-    float Utility::exchangeFrameToSecond(float _frame) {
+    float Utility::exchangeFrameToSeconds(float _frame) {
         return _frame / FPS;
     }
     

@@ -33,21 +33,21 @@ namespace project {
     }
     
     /**
-     *  @brief
+     *  @brief イベント登録
      */
     void EventsSequence::pushEvent(SequenceEvent* _event) {
         eventsVector_.pushBack(_event);
     }
     
     /**
-     *  @brief
+     *  @brief イベント登録
      */
     void EventsSequence::pushEvents(const cocos2d::Vector<SequenceEvent*> _eventsVector) {
         eventsVector_.pushBack(_eventsVector);
     }
     
     /**
-     *  @brief
+     *  @brief イベント開始
      */
     void EventsSequence::start() {
         if (eventsVector_.size() > 0) {
@@ -67,7 +67,7 @@ namespace project {
     }
     
     /**
-     *  @brief
+     *  @brief 次のイベントを開始
      */
     void EventsSequence::next() {
         if (eventsVector_.size() > 0) {

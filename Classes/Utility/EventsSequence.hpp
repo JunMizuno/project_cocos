@@ -14,7 +14,7 @@ namespace project {
     class SequenceEvent;
     
     /**
-     *  @brief
+     *  @brief イベント管理
      */
     class EventsSequence : public cocos2d::Node {
     private:

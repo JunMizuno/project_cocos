@@ -28,7 +28,7 @@ namespace project {
         
         static float getTwoPointBetweenDistance(cocos2d::Vec2 _v1, cocos2d::Vec2 _v2);
         static float getTowPointBetweenAngle(cocos2d::Vec2 _v1, cocos2d::Vec2 _v2);
-        static float exchangeFrameToSecond(float _frame);
+        static float exchangeFrameToSeconds(float _frame);
         static int32_t getCurrentTimeStampValue();
         static std::string getCurrentTimeStampString();
         static std::string exchangeTimeStampToDateTime(time_t _timeStamp);
