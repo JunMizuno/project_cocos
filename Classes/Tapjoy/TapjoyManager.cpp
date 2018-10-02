@@ -140,7 +140,7 @@ void TapjoyManager::setSpendCurrencySuccessedCallback(std::function<void(std::st
 }
 
 /**
- *  @ brief 全てのコールバックを初期化
+ *  @brief 全てのコールバックを初期化
  */
 void TapjoyManager::clearAllCallback() {
     setPlacementRequestFailedCallback(nullptr);

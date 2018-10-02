@@ -111,6 +111,7 @@
 		CAD518BC216225A800E1AB1C /* GameDataManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAD518BA216225A800E1AB1C /* GameDataManager.cpp */; };
 		CAD518C221630F5900E1AB1C /* PageIndicator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAD518C021630F5900E1AB1C /* PageIndicator.cpp */; };
 		CAD518C52163384300E1AB1C /* ScrollSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAD518C32163384300E1AB1C /* ScrollSlider.cpp */; };
+		CAD518C8216366C800E1AB1C /* Settings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAD518C6216366C800E1AB1C /* Settings.cpp */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
@@ -278,6 +279,8 @@
 		CAD518C121630F5900E1AB1C /* PageIndicator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PageIndicator.hpp; sourceTree = "<group>"; };
 		CAD518C32163384300E1AB1C /* ScrollSlider.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ScrollSlider.cpp; sourceTree = "<group>"; };
 		CAD518C42163384300E1AB1C /* ScrollSlider.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ScrollSlider.hpp; sourceTree = "<group>"; };
+		CAD518C6216366C800E1AB1C /* Settings.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Settings.cpp; sourceTree = "<group>"; };
+		CAD518C7216366C800E1AB1C /* Settings.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Settings.hpp; sourceTree = "<group>"; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -487,6 +490,8 @@
 				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
 				CA21ED9E2110547900C77819 /* GlobalDefine.cpp */,
 				CA21ED9F2110547900C77819 /* GlobalDefine.hpp */,
+				CAD518C6216366C800E1AB1C /* Settings.cpp */,
+				CAD518C7216366C800E1AB1C /* Settings.hpp */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -765,6 +770,7 @@
 				CAD518AC2159E38F00E1AB1C /* json11.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				CAD518C221630F5900E1AB1C /* PageIndicator.cpp in Sources */,
+				CAD518C8216366C800E1AB1C /* Settings.cpp in Sources */,
 				CA21EDA02110547900C77819 /* GlobalDefine.cpp in Sources */,
 				CA4193E321537353003B1E07 /* TapjoyManager.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,

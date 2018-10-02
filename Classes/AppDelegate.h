@@ -2,6 +2,7 @@
 #define  _APP_DELEGATE_H_
 
 #include "cocos2d.h"
+#include "Settings.hpp"
 
 /**
 @brief    The cocos2d Application.
