@@ -17,7 +17,7 @@ namespace project {
      */
     class PageIndicator : public cocos2d::Node {
     private:
-        cocos2d::Menu* menu_{nullptr};
+        cocos2d::Menu* pMenu_{nullptr};
         int32_t pageCount_{0};
         int32_t currentPageIndex_{0};
         

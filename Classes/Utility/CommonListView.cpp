@@ -60,14 +60,14 @@ namespace project {
         this->setAnchorPoint(Point::ANCHOR_MIDDLE);
         this->setContentSize(_contentSize);
         
-        listView_ = ui::ListView::create();
-        listView_->setTouchEnabled(false);
-        listView_->setSwallowTouches(false);
-        listView_->setClippingEnabled(false);
-        listView_->setItemsMargin(_itemMargin);
-        listView_->setAnchorPoint(Point::ANCHOR_MIDDLE);
-        listView_->setPosition(_contentSize / 2.0f);
-        this->addChild(listView_);
+        pListView_ = ui::ListView::create();
+        pListView_->setTouchEnabled(false);
+        pListView_->setSwallowTouches(false);
+        pListView_->setClippingEnabled(false);
+        pListView_->setItemsMargin(_itemMargin);
+        pListView_->setAnchorPoint(Point::ANCHOR_MIDDLE);
+        pListView_->setPosition(_contentSize / 2.0f);
+        this->addChild(pListView_);
         
         auto listener = EventListenerTouchOneByOne::create();
         listener->onTouchBegan = CC_CALLBACK_2(CommonListView::onTouchBegan, this);
@@ -100,7 +100,7 @@ namespace project {
         // コンテナの動きを停止させる
         containerVelocity_ = 0.0f;
         this->unschedule(schedule_selector(CommonListView::inertia));
-        listView_->getInnerContainer()->stopAllActions();
+        pListView_->getInnerContainer()->stopAllActions();
         
         // スクロール開始時に実行
         if (onScrollBegan_) {
@@ -129,7 +129,7 @@ namespace project {
             moveDiffPos_ = diffPos;
         }
         
-        switch (listView_->getDirection()) {
+        switch (pListView_->getDirection()) {
             case ui::ScrollView::Direction::HORIZONTAL:
                 containerVelocity_ = _touch->getDelta().x / 2.0f;
                 break;
@@ -169,12 +169,12 @@ namespace project {
     int32_t CommonListView::getCurrentHeadItemIndex() {
         int32_t index = 0;
         
-        switch (listView_->getDirection()) {
+        switch (pListView_->getDirection()) {
             case ui::ScrollView::Direction::HORIZONTAL:
             {
-                float width = itemContentSize_.width + listView_->getItemsMargin();
-                float innerContainerWidth = listView_->getInnerContainerSize().width - listView_->getContentSize().width;
-                float innerContainerPositionX = listView_->getInnerContainerPosition().x;
+                float width = itemContentSize_.width + pListView_->getItemsMargin();
+                float innerContainerWidth = pListView_->getInnerContainerSize().width - pListView_->getContentSize().width;
+                float innerContainerPositionX = pListView_->getInnerContainerPosition().x;
                 innerContainerPositionX = clampf(innerContainerPositionX, -innerContainerWidth, 0.0f);
                 index = -((innerContainerPositionX - (width / 2.0f)) / width);
             }
@@ -182,9 +182,9 @@ namespace project {
                 
             case ui::ScrollView::Direction::VERTICAL:
             {
-                float height = itemContentSize_.height + listView_->getItemsMargin();
-                float innerContainerHeight = listView_->getInnerContainerSize().height - listView_->getContentSize().height;
-                float innerContainerPositionY = listView_->getInnerContainerPosition().y;
+                float height = itemContentSize_.height + pListView_->getItemsMargin();
+                float innerContainerHeight = pListView_->getInnerContainerSize().height - pListView_->getContentSize().height;
+                float innerContainerPositionY = pListView_->getInnerContainerPosition().y;
                 innerContainerPositionY = clampf(innerContainerPositionY, -innerContainerHeight, 0.0f);
                 index = -((innerContainerPositionY - (height / 2.0f)) / height);
             }
@@ -215,15 +215,15 @@ namespace project {
      *  @brief リストに格納されているアイテム群を取得
      */
     const Vector<cocos2d::ui::Widget*>& CommonListView::getItems() {
-        return this->listView_->getItems();
+        return this->pListView_->getItems();
     }
     
     /**
      *  @brief インデックスを指定してアイテムを取得
      */
     ui::Widget* CommonListView::getItem(int32_t _itemIndex) {
-        if (_itemIndex >= 0 && _itemIndex < (listView_->getItems().size())) {
-            return listView_->getItem(_itemIndex);
+        if (_itemIndex >= 0 && _itemIndex < (pListView_->getItems().size())) {
+            return pListView_->getItem(_itemIndex);
         }
         
         return nullptr;
@@ -234,23 +234,23 @@ namespace project {
      */
     void CommonListView::pushBackCustomItem(cocos2d::ui::Widget* _item) {
         // まだ何もアイテムが追加されていない場合はリストビューのサイズを設定する
-        if (listView_->getItems().size() == 0) {
+        if (pListView_->getItems().size() == 0) {
             itemContentSize_ = _item->getContentSize();
 
-            switch (listView_->getDirection()) {
+            switch (pListView_->getDirection()) {
                 case ui::ScrollView::Direction::HORIZONTAL:
                 {
-                    float itemWidth = itemContentSize_.width + listView_->getItemsMargin();
-                    float activeItemWidth = (itemWidth * activeItemCount_) - listView_->getItemsMargin();
-                    listView_->setContentSize(Size(activeItemWidth, itemContentSize_.height));
+                    float itemWidth = itemContentSize_.width + pListView_->getItemsMargin();
+                    float activeItemWidth = (itemWidth * activeItemCount_) - pListView_->getItemsMargin();
+                    pListView_->setContentSize(Size(activeItemWidth, itemContentSize_.height));
                 }
                     break;
                     
                 case ui::ScrollView::Direction::VERTICAL:
                 {
-                    float itemHeight = itemContentSize_.height + listView_->getItemsMargin();
-                    float activeItemHeight = (itemHeight * activeItemCount_) - listView_->getItemsMargin();
-                    listView_->setContentSize(Size(itemContentSize_.width, activeItemHeight));
+                    float itemHeight = itemContentSize_.height + pListView_->getItemsMargin();
+                    float activeItemHeight = (itemHeight * activeItemCount_) - pListView_->getItemsMargin();
+                    pListView_->setContentSize(Size(itemContentSize_.width, activeItemHeight));
                 }
                     break;
                     
@@ -259,7 +259,7 @@ namespace project {
             }
         }
         
-        listView_->pushBackCustomItem(_item);
+        pListView_->pushBackCustomItem(_item);
         refreshItemColor();
     }
     
@@ -267,7 +267,7 @@ namespace project {
      *  @brief 指定したインデックスまで移動する
      */
     void CommonListView::jumpToItem(int32_t _itemIndex, bool isWithoutAction) {
-        listView_->getInnerContainer()->stopAllActions();
+        pListView_->getInnerContainer()->stopAllActions();
         
         float originalDuration = magneticDuration_;
         if (isWithoutAction) {
@@ -275,21 +275,21 @@ namespace project {
         }
         
         MoveTo* moveAction = nullptr;
-        switch (listView_->getDirection()) {
+        switch (pListView_->getDirection()) {
             case ui::ScrollView::Direction::HORIZONTAL:
             {
-                float itemWidth = itemContentSize_.width + listView_->getItemsMargin();
-                float activeItemsWidth = (itemWidth * activeItemCount_) - listView_->getItemsMargin();
-                float offset = (listView_->getContentSize().width - activeItemsWidth) / 2.0f;
+                float itemWidth = itemContentSize_.width + pListView_->getItemsMargin();
+                float activeItemsWidth = (itemWidth * activeItemCount_) - pListView_->getItemsMargin();
+                float offset = (pListView_->getContentSize().width - activeItemsWidth) / 2.0f;
                 moveAction = MoveTo::create(magneticDuration_, Vec2(-(_itemIndex) * itemWidth + offset, 0.0f));
             }
                 break;
                 
             case ui::ScrollView::Direction::VERTICAL:
             {
-                float itemHeight = itemContentSize_.height + listView_->getItemsMargin();
-                float activeItemsHeight = (itemHeight * activeItemCount_) - listView_->getItemsMargin();
-                float offset = (listView_->getContentSize().height - activeItemsHeight) / 2.0f;
+                float itemHeight = itemContentSize_.height + pListView_->getItemsMargin();
+                float activeItemsHeight = (itemHeight * activeItemCount_) - pListView_->getItemsMargin();
+                float offset = (pListView_->getContentSize().height - activeItemsHeight) / 2.0f;
                 moveAction = MoveTo::create(magneticDuration_, Vec2(0.0f, -(_itemIndex) * itemHeight + offset));
             }
                 break;
@@ -299,7 +299,7 @@ namespace project {
                 break;
         }
         
-        listView_->getInnerContainer()->runAction(Sequence::create({
+        pListView_->getInnerContainer()->runAction(Sequence::create({
             EaseOut::create(moveAction, PAGE_JUMP_EASE_RATE),
             CallFunc::create([this, isWithoutAction, originalDuration]() {
                 this->unschedule(UPDATE_SCROLL_INDEX_TAG);
@@ -350,20 +350,20 @@ namespace project {
     float CommonListView::getPercentage() {
         float percent = 0.0f;
         
-        switch (listView_->getDirection()) {
+        switch (pListView_->getDirection()) {
             case ui::ScrollView::Direction::HORIZONTAL:
             {
-                if (std::fabsf(listView_->getContentSize().width - listView_->getInnerContainerSize().width) <= FLT_EPSILON) {
+                if (std::fabsf(pListView_->getContentSize().width - pListView_->getInnerContainerSize().width) <= FLT_EPSILON) {
                     // ゼロ除算回避
                     return 100.0f;
                 }
                 
-                percent = 100.0f * (-listView_->getInnerContainerPosition().x / (listView_->getInnerContainerSize().width - listView_->getContentSize().width));
+                percent = 100.0f * (-pListView_->getInnerContainerPosition().x / (pListView_->getInnerContainerSize().width - pListView_->getContentSize().width));
             }
                 break;
                 
             case ui::ScrollView::Direction::VERTICAL:
-                percent = this->listView_->getScrolledPercentVertical();
+                percent = this->pListView_->getScrolledPercentVertical();
                 break;
                 
             default:
@@ -377,18 +377,18 @@ namespace project {
      *  @brief コンテナの位置をパーセンテージで設定
      */
     void CommonListView::setPercentage(int32_t _percent) {
-        switch (listView_->getDirection()) {
+        switch (pListView_->getDirection()) {
             case ui::ScrollView::Direction::HORIZONTAL:
             {
-                float x = -(listView_->getInnerContainerSize().width - listView_->getContentSize().width) * (_percent / 100.0f);
-                listView_->setInnerContainerPosition(Vec2(x, listView_->getInnerContainerPosition().y));
+                float x = -(pListView_->getInnerContainerSize().width - pListView_->getContentSize().width) * (_percent / 100.0f);
+                pListView_->setInnerContainerPosition(Vec2(x, pListView_->getInnerContainerPosition().y));
             }
                 break;
                 
             case ui::ScrollView::Direction::VERTICAL:
             {
-                float y = -(listView_->getInnerContainerSize().height - listView_->getContentSize().height) * (_percent / 100.0f);
-                listView_->setInnerContainerPosition(Vec2(listView_->getInnerContainerPosition().x, y));
+                float y = -(pListView_->getInnerContainerSize().height - pListView_->getContentSize().height) * (_percent / 100.0f);
+                pListView_->setInnerContainerPosition(Vec2(pListView_->getInnerContainerPosition().x, y));
             }
                 break;
                 
@@ -413,11 +413,11 @@ namespace project {
     bool CommonListView::moveContainer(float _velocity) {
         bool isOutOfBounds = false;
         
-        switch (listView_->getDirection()) {
+        switch (pListView_->getDirection()) {
             case ui::ScrollView::Direction::HORIZONTAL:
             {
-                float newPositionX = listView_->getInnerContainerPosition().x + _velocity;
-                float innerContainerWidth = listView_->getInnerContainerSize().width - listView_->getContentSize().width;
+                float newPositionX = pListView_->getInnerContainerPosition().x + _velocity;
+                float innerContainerWidth = pListView_->getInnerContainerSize().width - pListView_->getContentSize().width;
                 
                 // 境界からはみ出ないように座標を丸める
                 if (newPositionX <= -(innerContainerWidth + boundaryOutsideRange_)) {
@@ -429,14 +429,14 @@ namespace project {
                     isOutOfBounds = true;
                 }
                 
-                listView_->setInnerContainerPosition(Vec2(newPositionX, listView_->getInnerContainerPosition().y));
+                pListView_->setInnerContainerPosition(Vec2(newPositionX, pListView_->getInnerContainerPosition().y));
             }
                 break;
                 
             case ui::ScrollView::Direction::VERTICAL:
             {
-                float newPositionY = listView_->getInnerContainerPosition().y + _velocity;
-                float innerContainerHeight = listView_->getInnerContainerSize().height - listView_->getContentSize().height;
+                float newPositionY = pListView_->getInnerContainerPosition().y + _velocity;
+                float innerContainerHeight = pListView_->getInnerContainerSize().height - pListView_->getContentSize().height;
 
                 // 境界からはみ出ないように座標を丸める
                 if (newPositionY <= -(innerContainerHeight + boundaryOutsideRange_)) {
@@ -448,7 +448,7 @@ namespace project {
                     isOutOfBounds = true;
                 }
                 
-                listView_->setInnerContainerPosition(Vec2(listView_->getInnerContainerPosition().x, newPositionY));
+                pListView_->setInnerContainerPosition(Vec2(pListView_->getInnerContainerPosition().x, newPositionY));
             }
                 break;
                 
@@ -501,11 +501,11 @@ namespace project {
 
         // @memo. 初回コンテナ生成時にインデックスが正しく取得出来ないため、サイズを超えたインデックスの場合は最後尾のインデックスをさすようにする
         // @todo. 本当に必要かどうか動作をチェックすること
-        if (currentIndex > static_cast<int32_t>(listView_->getItems().size()) - activeItemCount_) {
-            currentIndex = static_cast<int32_t>(listView_->getItems().size()) - activeItemCount_;
+        if (currentIndex > static_cast<int32_t>(pListView_->getItems().size()) - activeItemCount_) {
+            currentIndex = static_cast<int32_t>(pListView_->getItems().size()) - activeItemCount_;
         }
         
-        switch (listView_->getDirection()) {
+        switch (pListView_->getDirection()) {
             case ui::ScrollView::Direction::HORIZONTAL:
             {
                 for (auto itr = items.begin(), end = items.end(); itr != end; itr++) {
@@ -555,20 +555,20 @@ namespace project {
      *  @brief リスト内の全てのアイテムを削除
      */
     void CommonListView::removeAllItemsInList() {
-        if (listView_->getItems().empty()) {
+        if (pListView_->getItems().empty()) {
             return;
         }
         
-        listView_->removeAllItems();
+        pListView_->removeAllItems();
         
         // インデックスをクリアする意味合いで、コンテナを左端あるいは最上部へ戻す
-        switch (listView_->getDirection()) {
+        switch (pListView_->getDirection()) {
             case ui::ScrollView::Direction::HORIZONTAL:
-                listView_->ListView::jumpToLeft();
+                pListView_->ListView::jumpToLeft();
                 break;
                 
             case ui::ScrollView::Direction::VERTICAL:
-                listView_->ListView::jumpToTop();
+                pListView_->ListView::jumpToTop();
                 break;
                 
             default:
@@ -584,28 +584,28 @@ namespace project {
             return;
         }
         
-        listView_->removeChild(_item);
+        pListView_->removeChild(_item);
     }
     
     /**
      *  @brief スクロールする方向を設定
      */
     void CommonListView::setScrollDiretion(ui::ScrollView::Direction _direction) {
-        listView_->setDirection(_direction);
+        pListView_->setDirection(_direction);
     }
     
     /**
      *  @brief クリッピングを設定
      */
     void CommonListView::setClippingEnabled(bool _enabled) {
-        listView_->setClippingEnabled(_enabled);
+        pListView_->setClippingEnabled(_enabled);
     }
     
     /**
      *  @brief コンテナを取得
      */
     ui::Layout* CommonListView::getContainer() const {
-        return listView_->getInnerContainer();
+        return pListView_->getInnerContainer();
     }
     
     /**
@@ -628,14 +628,14 @@ namespace project {
      *  @brief コンテナのサイズを取得
      */
     Size CommonListView::getInnerContainerSize() const {
-        return listView_->getInnerContainerSize();
+        return pListView_->getInnerContainerSize();
     }
     
     /**
      *  @brief レイアウトを更新
      */
     void CommonListView::doLayout() {
-        listView_->doLayout();
+        pListView_->doLayout();
     }
     
     /**
@@ -644,7 +644,7 @@ namespace project {
      *  @detail 座標を調整しないといけなくなるはずなので、以降アイテムの基本座標やサイズを渡すなどして要調整
      */
     void CommonListView::refreshViewItemsScale() {
-        int32_t maxIndex = static_cast<int32_t>(listView_->getItems().size()) - 1;
+        int32_t maxIndex = static_cast<int32_t>(pListView_->getItems().size()) - 1;
         if (maxIndex <= 0) {
             return;
         }

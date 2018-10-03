@@ -21,7 +21,7 @@ namespace project {
         float boundaryOutsideRange_{100.0f};    // はみだす範囲
         float velocityEndInertia_{2.0f};        // 慣性が止まる速度
         float magneticDuration_{0.2f};          // 吸い付きの値
-        cocos2d::ui::ListView* listView_{nullptr};
+        cocos2d::ui::ListView* pListView_{nullptr};
         float containerVelocity_{0.0f};
         cocos2d::Size itemContentSize_{0.0f, 0.0f};
         int32_t activeItemCount_{0};

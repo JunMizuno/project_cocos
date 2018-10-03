@@ -16,9 +16,9 @@ namespace project {
      */
     class ScrollSlider : public cocos2d::ui::Widget {
     private:
-        cocos2d::ui::Slider* slider_{nullptr};
-        cocos2d::ui::Scale9Sprite* frame_{nullptr};
-        cocos2d::ui::Scale9Sprite* marker_{nullptr};
+        cocos2d::ui::Slider* pSlider_{nullptr};
+        cocos2d::ui::Scale9Sprite* pFrame_{nullptr};
+        cocos2d::ui::Scale9Sprite* pMarker_{nullptr};
         cocos2d::Size markerOriginalSize_{cocos2d::Size::ZERO};
         std::function<void(int32_t)> onSlide_{nullptr};
         std::function<void(void)> onSlideEnded_{nullptr};

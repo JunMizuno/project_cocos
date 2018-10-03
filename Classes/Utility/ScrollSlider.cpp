@@ -85,22 +85,22 @@ namespace project {
      */
     void ScrollSlider::initSettings(float _markerLengthRate, float _width) {
         // 枠
-        frame_ = ui::Scale9Sprite::create(SLIDER_FRAME_TEXTURE, SLIDER_IN_RECT);
-        frame_->setContentSize(Size(_width, SLIDER_FRAME_SIZE.height));
-        this->addChild(frame_);
+        pFrame_ = ui::Scale9Sprite::create(SLIDER_FRAME_TEXTURE, SLIDER_IN_RECT);
+        pFrame_->setContentSize(Size(_width, SLIDER_FRAME_SIZE.height));
+        this->addChild(pFrame_);
         
         // 操作バー
-        marker_ = ui::Scale9Sprite::create(SLIDER_MARKER_TEXTURE, SLIDER_IN_RECT);
-        marker_->setContentSize(Size(_width, SLIDER_FRAME_SIZE.height));
-        this->addChild(marker_);
+        pMarker_ = ui::Scale9Sprite::create(SLIDER_MARKER_TEXTURE, SLIDER_IN_RECT);
+        pMarker_->setContentSize(Size(_width, SLIDER_FRAME_SIZE.height));
+        this->addChild(pMarker_);
         
         // スライダー
-        slider_ = ui::Slider::create();
-        slider_->loadBarTexture(SLIDER_DUMMY_TEXTURE);
-        slider_->setScale9Enabled(true);
-        slider_->setContentSize(Size(_width, SLIDER_FRAME_SIZE.height) + SLIDER_TOUCH_SIZE_OFFSET);
-        slider_->addEventListener([this](Ref* _node, ui::Slider::EventType _eventType) {
-            int32_t percent = slider_->getPercent();
+        pSlider_ = ui::Slider::create();
+        pSlider_->loadBarTexture(SLIDER_DUMMY_TEXTURE);
+        pSlider_->setScale9Enabled(true);
+        pSlider_->setContentSize(Size(_width, SLIDER_FRAME_SIZE.height) + SLIDER_TOUCH_SIZE_OFFSET);
+        pSlider_->addEventListener([this](Ref* _node, ui::Slider::EventType _eventType) {
+            int32_t percent = pSlider_->getPercent();
             setMarkerPercent(percent);
             
             switch (_eventType) {
@@ -126,7 +126,7 @@ namespace project {
                     break;
             }
         });
-        this->addChild(slider_);
+        this->addChild(pSlider_);
         
         this->setMarkerLength(_markerLengthRate);
     }
@@ -144,8 +144,8 @@ namespace project {
         this->setEnabled(true);
         this->setVisible(true);
         
-        markerOriginalSize_ = Size(std::max(MIN_MARKER_WIDTH, frame_->getContentSize().width * _markerLengthRate), SLIDER_FRAME_SIZE.height);
-        marker_->setContentSize(markerOriginalSize_);
+        markerOriginalSize_ = Size(std::max(MIN_MARKER_WIDTH, pFrame_->getContentSize().width * _markerLengthRate), SLIDER_FRAME_SIZE.height);
+        pMarker_->setContentSize(markerOriginalSize_);
         
         this->setMarkerPercent(static_cast<float>(this->getMarkerPercent()));
     }
@@ -154,27 +154,27 @@ namespace project {
      *  @brief 操作バーのパーセンテージを設定
      */
     void ScrollSlider::setMarkerPercent(float _percentage) {
-        slider_->setPercent(static_cast<int32_t>(_percentage));
+        pSlider_->setPercent(static_cast<int32_t>(_percentage));
         
-        float basePosX = (-frame_->getContentSize().width / 2.0f) + (markerOriginalSize_.width / 2.0f);
-        float value = (frame_->getContentSize().width - markerOriginalSize_.width) * (_percentage * PERCENTAGE_VALUE_RATE);
+        float basePosX = (-pFrame_->getContentSize().width / 2.0f) + (markerOriginalSize_.width / 2.0f);
+        float value = (pFrame_->getContentSize().width - markerOriginalSize_.width) * (_percentage * PERCENTAGE_VALUE_RATE);
         
         float leftSideValue = 0.0f;
-        float rightSideValue = (frame_->getContentSize().width - markerOriginalSize_.width);
+        float rightSideValue = (pFrame_->getContentSize().width - markerOriginalSize_.width);
         
         if (value <= leftSideValue) {
             float diff = leftSideValue - value;
-            marker_->setContentSize(markerOriginalSize_ + Size(-diff, 0.0f));
-            marker_->setPositionX(basePosX + (leftSideValue - diff / 2.0f));
+            pMarker_->setContentSize(markerOriginalSize_ + Size(-diff, 0.0f));
+            pMarker_->setPositionX(basePosX + (leftSideValue - diff / 2.0f));
         }
         else if (value >= rightSideValue) {
             float diff = rightSideValue - value;
-            marker_->setContentSize(markerOriginalSize_ + Size(-diff, 0.0f));
-            marker_->setPositionX(basePosX + (rightSideValue + diff / 2.0f));
+            pMarker_->setContentSize(markerOriginalSize_ + Size(-diff, 0.0f));
+            pMarker_->setPositionX(basePosX + (rightSideValue + diff / 2.0f));
         }
         else {
-            marker_->setContentSize(markerOriginalSize_);
-            marker_->setPositionX(basePosX + value);
+            pMarker_->setContentSize(markerOriginalSize_);
+            pMarker_->setPositionX(basePosX + value);
         }
     }
     
@@ -182,6 +182,6 @@ namespace project {
      *  @brief 操作バーのパーセンテージを取得
      */
     int32_t ScrollSlider::getMarkerPercent() {
-        return slider_->getPercent();
+        return pSlider_->getPercent();
     }
 }

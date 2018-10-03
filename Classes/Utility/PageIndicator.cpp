@@ -80,11 +80,11 @@ namespace project {
             menuItemVector.pushBack(menuImage);
         }
         
-        menu_ = Menu::createWithArray(menuItemVector);
+        pMenu_ = Menu::createWithArray(menuItemVector);
         // @todo. 縦の場合は変更が必要、プロジェクトによって切り替えが発生するはず
-        menu_->alignItemsHorizontallyWithPadding(PAGE_INDICATOR_SPACE);
-        menu_->setPosition(Vec2::ZERO);
-        this->addChild(menu_);
+        pMenu_->alignItemsHorizontallyWithPadding(PAGE_INDICATOR_SPACE);
+        pMenu_->setPosition(Vec2::ZERO);
+        this->addChild(pMenu_);
     }
     
     /**
@@ -118,18 +118,18 @@ namespace project {
             return false;
         }
         
-        if (!menu_) {
+        if (!pMenu_) {
             return false;
         }
         
         // 前回選択のページを非表示にする
-        MenuItemSprite* previousItemSprite = menu_->getChildByTag<MenuItemSprite*>(currentPageIndex_);
+        MenuItemSprite* previousItemSprite = pMenu_->getChildByTag<MenuItemSprite*>(currentPageIndex_);
         if (previousItemSprite) {
             previousItemSprite->unselected();
         }
         
         // 今回選択のページを有効にする
-        MenuItemSprite* currentItemSprite = menu_->getChildByTag<MenuItemSprite*>(_page);
+        MenuItemSprite* currentItemSprite = pMenu_->getChildByTag<MenuItemSprite*>(_page);
         if (currentItemSprite) {
             currentItemSprite->selected();
         }

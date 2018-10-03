@@ -76,13 +76,13 @@ namespace project {
      */
     void GaugeSprite::createFrame() {
         // @memo. 以後必要であれば固有画像に差し替える
-        frameSprite_ = Sprite::create();
-        frameSprite_->setContentSize(commonContentSize_);
-        frameSprite_->setTextureRect(Rect(0.0f, 0.0f, commonContentSize_.width, commonContentSize_.height));
-        frameSprite_->setColor(Color3B::WHITE);
-        frameSprite_->setAnchorPoint(Point::ANCHOR_MIDDLE);
-        frameSprite_->setPosition(this->getContentSize() / 2.0f);
-        this->addChild(frameSprite_);
+        pFrameSprite_ = Sprite::create();
+        pFrameSprite_->setContentSize(commonContentSize_);
+        pFrameSprite_->setTextureRect(Rect(0.0f, 0.0f, commonContentSize_.width, commonContentSize_.height));
+        pFrameSprite_->setColor(Color3B::WHITE);
+        pFrameSprite_->setAnchorPoint(Point::ANCHOR_MIDDLE);
+        pFrameSprite_->setPosition(this->getContentSize() / 2.0f);
+        this->addChild(pFrameSprite_);
     }
     
     /**
@@ -90,14 +90,14 @@ namespace project {
      */
     void GaugeSprite::createMainGauge() {
         // @memo. 以後必要であれば固有画像に差し替える
-        mainGaugeSprite_ = Sprite::create();
-        mainGaugeSprite_->setContentSize(commonContentSize_ - GAUGE_COMMON_INNNER_SIZE_OFFSET);
-        mainGaugeSprite_->setTextureRect(Rect(0.0f, 0.0f, mainGaugeSprite_->getContentSize().width, mainGaugeSprite_->getContentSize().height));
-        mainGaugeSprite_->setColor(Color3B::RED);
-        mainGaugeSprite_->setAnchorPoint(Point::ANCHOR_MIDDLE_LEFT);
-        mainGaugeSprite_->setPosition(0.0f + GAUGE_COMMON_WIDTH_OFFSET, this->getContentSize().height / 2.0f);
-        this->addChild(mainGaugeSprite_);
-        mainGaugeSprite_->setScaleX(0.0f);
+        pMainGaugeSprite_ = Sprite::create();
+        pMainGaugeSprite_->setContentSize(commonContentSize_ - GAUGE_COMMON_INNNER_SIZE_OFFSET);
+        pMainGaugeSprite_->setTextureRect(Rect(0.0f, 0.0f, pMainGaugeSprite_->getContentSize().width, pMainGaugeSprite_->getContentSize().height));
+        pMainGaugeSprite_->setColor(Color3B::RED);
+        pMainGaugeSprite_->setAnchorPoint(Point::ANCHOR_MIDDLE_LEFT);
+        pMainGaugeSprite_->setPosition(0.0f + GAUGE_COMMON_WIDTH_OFFSET, this->getContentSize().height / 2.0f);
+        this->addChild(pMainGaugeSprite_);
+        pMainGaugeSprite_->setScaleX(0.0f);
     }
     
     /**
@@ -105,20 +105,20 @@ namespace project {
      */
     void GaugeSprite::createHighlightGauge() {
         // @memo. 以後必要であれば固有画像に差し替える
-        highlightGaugeSprite_ = Sprite::create();
-        highlightGaugeSprite_->setContentSize(commonContentSize_ - GAUGE_COMMON_INNNER_SIZE_OFFSET);
-        highlightGaugeSprite_->setAnchorPoint(Point::ANCHOR_MIDDLE_LEFT);
-        highlightGaugeSprite_->setPosition(0.0f + GAUGE_COMMON_WIDTH_OFFSET, this->getContentSize().height / 2.0f);
-        highlightGaugeSprite_->setOpacity(COMMON_SKELTON_OPACITY);
-        this->addChild(highlightGaugeSprite_);
-        highlightGaugeSprite_->setScaleX(0.0f);
+        pHighlightGaugeSprite_ = Sprite::create();
+        pHighlightGaugeSprite_->setContentSize(commonContentSize_ - GAUGE_COMMON_INNNER_SIZE_OFFSET);
+        pHighlightGaugeSprite_->setAnchorPoint(Point::ANCHOR_MIDDLE_LEFT);
+        pHighlightGaugeSprite_->setPosition(0.0f + GAUGE_COMMON_WIDTH_OFFSET, this->getContentSize().height / 2.0f);
+        pHighlightGaugeSprite_->setOpacity(COMMON_SKELTON_OPACITY);
+        this->addChild(pHighlightGaugeSprite_);
+        pHighlightGaugeSprite_->setScaleX(0.0f);
     }
     
     /**
      *  @brief ゲージのスケールを変更
      */
     void GaugeSprite::changeGaugeScale(int32_t _currentValue, int32_t _maxValue) {
-        if (!mainGaugeSprite_ || !highlightGaugeSprite_) {
+        if (!pMainGaugeSprite_ || !pHighlightGaugeSprite_) {
             return;
         }
         
@@ -126,15 +126,15 @@ namespace project {
             return;
         }
         
-        mainGaugeSprite_->setScaleX(targetScaleX_);
-        highlightGaugeSprite_->setScaleX(targetScaleX_);
+        pMainGaugeSprite_->setScaleX(targetScaleX_);
+        pHighlightGaugeSprite_->setScaleX(targetScaleX_);
     }
     
     /**
      *  @brief ゲージの伸縮設定
      */
     bool GaugeSprite::setGaugeAnimationState(int32_t _currentValue, int32_t _maxValue) {
-        if (!mainGaugeSprite_ || !highlightGaugeSprite_) {
+        if (!pMainGaugeSprite_ || !pHighlightGaugeSprite_) {
             return false;
         }
         
@@ -160,12 +160,12 @@ namespace project {
         cocos2d::Vector<FiniteTimeAction*> actions;
         actions.pushBack(CallFunc::create([this, _frames, _isAdd]() {
             if (!_isAdd) {
-                mainGaugeSprite_->setScale(1.0f);
-                highlightGaugeSprite_->setScale(1.0f);
+                pMainGaugeSprite_->setScale(1.0f);
+                pHighlightGaugeSprite_->setScale(1.0f);
             }
             
-            mainGaugeSprite_->runAction(Sequence::create(ScaleTo::create(Utility::exchangeFrameToSeconds(_frames), targetScaleX_, 1.0f), nullptr));
-            highlightGaugeSprite_->runAction(Sequence::create(ScaleTo::create(Utility::exchangeFrameToSeconds(_frames), targetScaleX_, 1.0f), nullptr));
+            pMainGaugeSprite_->runAction(Sequence::create(ScaleTo::create(Utility::exchangeFrameToSeconds(_frames), targetScaleX_, 1.0f), nullptr));
+            pHighlightGaugeSprite_->runAction(Sequence::create(ScaleTo::create(Utility::exchangeFrameToSeconds(_frames), targetScaleX_, 1.0f), nullptr));
         }));
         actions.pushBack(DelayTime::create(_frames));
         actions.pushBack(CallFunc::create([this]() {
@@ -186,8 +186,8 @@ namespace project {
         
         float addScaleValue = (targetScaleX_ <= 0.0f) ? (1.0f / _frames) : (targetScaleX_ / _frames);
         if (!_isAdd) {
-            mainGaugeSprite_->setScaleX(1.0f);
-            highlightGaugeSprite_->setScaleX(1.0f);
+            pMainGaugeSprite_->setScaleX(1.0f);
+            pHighlightGaugeSprite_->setScaleX(1.0f);
             scalePerFrame_ = 1.0f;
         }
 
@@ -210,8 +210,8 @@ namespace project {
                 }
             }
             
-            mainGaugeSprite_->setScale(scalePerFrame_, 1.0f);
-            highlightGaugeSprite_->setScale(scalePerFrame_, 1.0f);
+            pMainGaugeSprite_->setScale(scalePerFrame_, 1.0f);
+            pHighlightGaugeSprite_->setScale(scalePerFrame_, 1.0f);
             
             if (isFinish) {
                 // @todo. 必要であれば適宜色変更をする

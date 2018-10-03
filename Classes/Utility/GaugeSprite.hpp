@@ -17,9 +17,9 @@ namespace project {
     class GaugeSprite : public cocos2d::Node {
     private:
         cocos2d::Size commonContentSize_{0.0f, 0.0f};
-        cocos2d::Sprite* frameSprite_{nullptr};
-        cocos2d::Sprite* mainGaugeSprite_{nullptr};
-        cocos2d::Sprite* highlightGaugeSprite_{nullptr};
+        cocos2d::Sprite* pFrameSprite_{nullptr};
+        cocos2d::Sprite* pMainGaugeSprite_{nullptr};
+        cocos2d::Sprite* pHighlightGaugeSprite_{nullptr};
         float targetScaleX_{0.0f};
         float scalePerFrame_{0.0f};
         
