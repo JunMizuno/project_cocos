@@ -309,48 +309,7 @@ namespace project {
         
         return json;
     }
-    
-    /**
-     *  @brief タッチ不可エリアを生成
-     *  @detail 全画面に対して
-     */
-    void Utility::createDisableTouchArea(Node* _node) {
-        if (!_node) {
-            return;
-        }
         
-        auto disableTouchButton = ui::Button::create();
-        disableTouchButton->setScale9Enabled(true);
-        disableTouchButton->setContentSize(Director::getInstance()->getWinSize());
-        disableTouchButton->setPosition(Director::getInstance()->getWinSize() / 2.0f);
-        disableTouchButton->addClickEventListener([](Ref* _node) {
-            return;
-        });
-        _node->addChild(disableTouchButton);
-        disableTouchButton->setName(DISABLE_NODE_TAG);
-        
-        Sprite* sprite = Sprite::create();
-        sprite->setTextureRect(Rect(0.0f, 0.0f, disableTouchButton->getContentSize().width, disableTouchButton->getContentSize().height));
-        sprite->setColor(Color3B::BLACK);
-        sprite->setOpacity(DISABLE_SPRITE_OPACITY_VALUE);
-        sprite->setAnchorPoint(Point::ANCHOR_MIDDLE);
-        sprite->setPosition(disableTouchButton->getContentSize() / 2.0f);
-        disableTouchButton->addChild(sprite);
-    }
-    
-    /**
-     *  @brief タッチ不可エリアを解放
-     */
-    void Utility::removeDisableTouchArea(Node* _node) {
-        if (!_node) {
-            return;
-        }
-        
-        if (_node->getChildByName<Node*>(DISABLE_NODE_TAG)) {
-            _node->getChildByName<Node*>(DISABLE_NODE_TAG)->removeFromParent();
-        }
-    }
-    
     /**
      *  @brief 数値の桁数を取得
      */

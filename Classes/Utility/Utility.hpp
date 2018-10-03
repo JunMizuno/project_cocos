@@ -42,8 +42,6 @@ namespace project {
         static std::vector<std::string> splitString(const std::string& _baseString, char _delim);
         static json11::Json loadJsonData(const std::string& _filePath);
         static json11::Json parseJson(const std::string& _key);
-        static void createDisableTouchArea(cocos2d::Node* _node);
-        static void removeDisableTouchArea(cocos2d::Node* _node);
         static int32_t getNumberDigit(int32_t _number);
         
         
