@@ -112,6 +112,7 @@
 		CAD518C221630F5900E1AB1C /* PageIndicator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAD518C021630F5900E1AB1C /* PageIndicator.cpp */; };
 		CAD518C52163384300E1AB1C /* ScrollSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAD518C32163384300E1AB1C /* ScrollSlider.cpp */; };
 		CAD518C8216366C800E1AB1C /* Settings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAD518C6216366C800E1AB1C /* Settings.cpp */; };
+		CAD518CB21637D3B00E1AB1C /* DisableTouchAreaButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAD518C921637D3B00E1AB1C /* DisableTouchAreaButton.cpp */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
@@ -281,6 +282,8 @@
 		CAD518C42163384300E1AB1C /* ScrollSlider.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ScrollSlider.hpp; sourceTree = "<group>"; };
 		CAD518C6216366C800E1AB1C /* Settings.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Settings.cpp; sourceTree = "<group>"; };
 		CAD518C7216366C800E1AB1C /* Settings.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Settings.hpp; sourceTree = "<group>"; };
+		CAD518C921637D3B00E1AB1C /* DisableTouchAreaButton.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DisableTouchAreaButton.cpp; sourceTree = "<group>"; };
+		CAD518CA21637D3B00E1AB1C /* DisableTouchAreaButton.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DisableTouchAreaButton.hpp; sourceTree = "<group>"; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -556,6 +559,7 @@
 		CA4193D8215323BE003B1E07 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				CAD518CC21644B1800E1AB1C /* Platform */,
 				CAD518A52159E0ED00E1AB1C /* json11 */,
 				CA21ED9820FCE6C500C77819 /* Utility.cpp */,
 				CA21ED9920FCE6C500C77819 /* Utility.hpp */,
@@ -577,6 +581,8 @@
 				CAD518C121630F5900E1AB1C /* PageIndicator.hpp */,
 				CAD518C32163384300E1AB1C /* ScrollSlider.cpp */,
 				CAD518C42163384300E1AB1C /* ScrollSlider.hpp */,
+				CAD518C921637D3B00E1AB1C /* DisableTouchAreaButton.cpp */,
+				CAD518CA21637D3B00E1AB1C /* DisableTouchAreaButton.hpp */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -605,6 +611,13 @@
 				CAD518AA2159E38F00E1AB1C /* json11.hpp */,
 			);
 			path = json11;
+			sourceTree = "<group>";
+		};
+		CAD518CC21644B1800E1AB1C /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Platform;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -758,6 +771,7 @@
 			files = (
 				CA21ED9A20FCE6C500C77819 /* Utility.cpp in Sources */,
 				CA4193EF215381A1003B1E07 /* MyTJSpendCurrencyListener.cpp in Sources */,
+				CAD518CB21637D3B00E1AB1C /* DisableTouchAreaButton.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				CAD518B8215DC68500E1AB1C /* CommonListView.cpp in Sources */,
 				CAD518B2215A0C6800E1AB1C /* EventsSequence.cpp in Sources */,
