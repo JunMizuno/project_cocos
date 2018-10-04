@@ -164,7 +164,7 @@ namespace project {
     
     /**
      *  @brief 現在のインデックスを取得
-     *  @detail リストの表示しているアイテム群の先頭のインデックスを返す
+     *  @details リストの表示しているアイテム群の先頭のインデックスを返す
      */
     int32_t CommonListView::getCurrentHeadItemIndex() {
         int32_t index = 0;
@@ -640,8 +640,8 @@ namespace project {
     
     /**
      *  @brief スクロール時のアイテムのスケールを更新
-     *  @detail プロジェクトによっては仕様が合わない可能性あり
-     *  @detail 座標を調整しないといけなくなるはずなので、以降アイテムの基本座標やサイズを渡すなどして要調整
+     *  @details プロジェクトによっては仕様が合わない可能性あり
+     *  @details 座標を調整しないといけなくなるはずなので、以降アイテムの基本座標やサイズを渡すなどして要調整
      */
     void CommonListView::refreshViewItemsScale() {
         int32_t maxIndex = static_cast<int32_t>(pListView_->getItems().size()) - 1;

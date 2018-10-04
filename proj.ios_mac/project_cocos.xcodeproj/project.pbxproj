@@ -113,6 +113,7 @@
 		CAD518C52163384300E1AB1C /* ScrollSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAD518C32163384300E1AB1C /* ScrollSlider.cpp */; };
 		CAD518C8216366C800E1AB1C /* Settings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAD518C6216366C800E1AB1C /* Settings.cpp */; };
 		CAD518CB21637D3B00E1AB1C /* DisableTouchAreaButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAD518C921637D3B00E1AB1C /* DisableTouchAreaButton.cpp */; };
+		CAD518CF216495B000E1AB1C /* ClippingView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAD518CD216495B000E1AB1C /* ClippingView.cpp */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
@@ -284,6 +285,8 @@
 		CAD518C7216366C800E1AB1C /* Settings.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Settings.hpp; sourceTree = "<group>"; };
 		CAD518C921637D3B00E1AB1C /* DisableTouchAreaButton.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DisableTouchAreaButton.cpp; sourceTree = "<group>"; };
 		CAD518CA21637D3B00E1AB1C /* DisableTouchAreaButton.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DisableTouchAreaButton.hpp; sourceTree = "<group>"; };
+		CAD518CD216495B000E1AB1C /* ClippingView.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ClippingView.cpp; sourceTree = "<group>"; };
+		CAD518CE216495B000E1AB1C /* ClippingView.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ClippingView.hpp; sourceTree = "<group>"; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -583,6 +586,8 @@
 				CAD518C42163384300E1AB1C /* ScrollSlider.hpp */,
 				CAD518C921637D3B00E1AB1C /* DisableTouchAreaButton.cpp */,
 				CAD518CA21637D3B00E1AB1C /* DisableTouchAreaButton.hpp */,
+				CAD518CD216495B000E1AB1C /* ClippingView.cpp */,
+				CAD518CE216495B000E1AB1C /* ClippingView.hpp */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -769,6 +774,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAD518CF216495B000E1AB1C /* ClippingView.cpp in Sources */,
 				CA21ED9A20FCE6C500C77819 /* Utility.cpp in Sources */,
 				CA4193EF215381A1003B1E07 /* MyTJSpendCurrencyListener.cpp in Sources */,
 				CAD518CB21637D3B00E1AB1C /* DisableTouchAreaButton.cpp in Sources */,

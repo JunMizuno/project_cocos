@@ -148,7 +148,8 @@ namespace project {
      *  @brief 日付文をタイムスタンプ値に変換
      */
     time_t Utility::exchangeDateTimeToTimeStamp(const std::string& _dateTime) {
-        tm tm;
+        time_t currentTimeStamp = getCurrentTimeStampValue();
+        tm tm = *localtime(&currentTimeStamp);
         
         if (!strptime(_dateTime.c_str(), "%Y-%m-%d %H:%M:%S", &tm)) {
             return 0;
@@ -159,7 +160,7 @@ namespace project {
     
     /**
      *  @brief 次の日のタイムスタンプ値を取得
-     *  @detail 0:00時点のもの
+     *  @details 0:00時点のもの
      */
     time_t Utility::getTommorowsTimeStamp() {
         time_t currentTimeStamp = getCurrentTimeStampValue();
@@ -190,7 +191,7 @@ namespace project {
     
     /**
      *  @brief 文字の長さを取得
-     *  @detail 日本語が含まれているとデフォルト関数では正確な値が取得出来ないため
+     *  @details 日本語が含まれているとデフォルト関数では正確な値が取得出来ないため
      */
     int32_t Utility::getStringsCount(const std::string& _string) {
         int32_t count = 0;
@@ -222,7 +223,7 @@ namespace project {
     
     /**
      *  @brief 指定した数値の文字の位置を取得
-     *  @detail 日本語が含まれているとデフォルト関数では正確な値が取得出来ないため
+     *  @details 日本語が含まれているとデフォルト関数では正確な値が取得出来ないため
      */
     int32_t Utility::getStringsPositionFromCount(const std::string& _string, int32_t _count) {
         int32_t retPosition = 0;
@@ -316,4 +317,28 @@ namespace project {
     int32_t Utility::getNumberDigit(int32_t _number) {
         return log10f(_number) + 1;
     }
+    
+    /**
+     *  @brief 重みの配列から抽選して値を返す
+     */
+    int32_t Utility::drawLots(const std::vector<int32_t>& _ratioVector) {
+        int32_t total = std::accumulate(_ratioVector.begin(), _ratioVector.end(), 0);
+        
+        int32_t randomValue = (getMt()()) % total;
+        for (int32_t i = 0; i < _ratioVector.size(); i++) {
+            if (randomValue < _ratioVector.at(i)) {
+                return _ratioVector.at(i);
+            }
+            
+            randomValue -= _ratioVector.at(i);
+        }
+        
+        return 0;
+    }
+    
+    
+    
+    
+    
+    
 }

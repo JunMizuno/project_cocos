@@ -77,7 +77,7 @@ namespace project {
     
     /**
      *  @brief 表示タイプを設定
-     *  @detail RADIALかBARかのどちらか
+     *  @details RADIALかBARかのどちらか
      */
     void ProgressTimerSprite::setBarType(cocos2d::ProgressTimer::Type _type) {
         if (pProgressTimer_) {

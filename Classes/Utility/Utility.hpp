@@ -43,7 +43,7 @@ namespace project {
         static json11::Json loadJsonData(const std::string& _filePath);
         static json11::Json parseJson(const std::string& _key);
         static int32_t getNumberDigit(int32_t _number);
-        
+        static inline int32_t drawLots(const std::vector<int32_t>& _ratioVector);
         
         
     };

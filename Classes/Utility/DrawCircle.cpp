@@ -66,7 +66,7 @@ namespace project {
     
     /**
      *  @brief 単独円を描画
-     *  @detail 指定された半径大のドットを円とみなす
+     *  @details 指定された半径大のドットを円とみなす
      */
     void DrawCircle::drawSingleCircle(float _radius, Color4F _color) {
         if(!pSingleCircle_) {

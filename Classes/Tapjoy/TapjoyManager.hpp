@@ -28,7 +28,7 @@ extern "C" {
 
 /**
  *  @brief TapjoyManager
- *  @detail C++での実装例
+ *  @details C++での実装例
  */
 class TapjoyManager {
 private:
