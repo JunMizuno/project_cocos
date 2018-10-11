@@ -287,6 +287,7 @@
 		CAD518CA21637D3B00E1AB1C /* DisableTouchAreaButton.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DisableTouchAreaButton.hpp; sourceTree = "<group>"; };
 		CAD518CD216495B000E1AB1C /* ClippingView.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ClippingView.cpp; sourceTree = "<group>"; };
 		CAD518CE216495B000E1AB1C /* ClippingView.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ClippingView.hpp; sourceTree = "<group>"; };
+		CAD518D02165B4E500E1AB1C /* CCDate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CCDate.hpp; sourceTree = "<group>"; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -588,6 +589,7 @@
 				CAD518CA21637D3B00E1AB1C /* DisableTouchAreaButton.hpp */,
 				CAD518CD216495B000E1AB1C /* ClippingView.cpp */,
 				CAD518CE216495B000E1AB1C /* ClippingView.hpp */,
+				CAD518D02165B4E500E1AB1C /* CCDate.hpp */,
 			);
 			path = Utility;
 			sourceTree = "<group>";

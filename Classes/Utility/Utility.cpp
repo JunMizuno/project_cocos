@@ -8,6 +8,7 @@
 #include "Utility.hpp"
 #include "GlobalDefine.hpp"
 #include "ui/CocosGUI.h"
+#include "CCDate.hpp"
 
 USING_NS_CC;
 
