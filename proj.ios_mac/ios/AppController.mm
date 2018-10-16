@@ -46,6 +46,9 @@ static AppDelegate s_sharedApplication;
     app->initGLContextAttrs();
     cocos2d::GLViewImpl::convertAttrs();
     
+    // アイコンのバッジを無効化
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+    
     // Override point for customization after application launch.
 
     // Add the view controller's view to the window and display.

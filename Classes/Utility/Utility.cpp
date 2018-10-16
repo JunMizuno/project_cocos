@@ -19,8 +19,6 @@ namespace project {
         constexpr int8_t STRING_SIZE_THREE = 3;
         constexpr int8_t STRING_SIZE_FOUR = 4;
         constexpr int32_t TIME_COUNT_OF_ONE_DAY = 86400;
-        constexpr char DISABLE_NODE_TAG[] = "disable_node";
-        constexpr int32_t DISABLE_SPRITE_OPACITY_VALUE = 192;
     }
     
     /**
