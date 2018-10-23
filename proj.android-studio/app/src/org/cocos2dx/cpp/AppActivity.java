@@ -27,6 +27,9 @@ import android.os.Bundle;
 import org.cocos2dx.lib.Cocos2dxActivity;
 
 public class AppActivity extends Cocos2dxActivity {
+    // Add for Utility_NDK
+    private static native void initNDK(Context context);
+
     // Add for Tapjoy
     public static native void setTapjoyActivity(Context context);
 
@@ -44,6 +47,9 @@ public class AppActivity extends Cocos2dxActivity {
         }
         // DO OTHER INITIALIZATION BELOW
         
+        // Add for Utility_NDK
+        initNDK(this.getApplicationContext());
+
         // Add for Tapjoy
         setTapjoyActivity(this.getApplicationContext());
     }
