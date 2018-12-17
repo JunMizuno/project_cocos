@@ -64,6 +64,8 @@
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
+		CA0475D921C7636700A6B2EA /* LocalNotification_iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA0475D821C7636700A6B2EA /* LocalNotification_iOS.mm */; };
+		CA0475DC21C765DE00A6B2EA /* LocalNotificationBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA0475DA21C765DE00A6B2EA /* LocalNotificationBase.cpp */; };
 		CA21ED9520EF5B2F00C77819 /* FirstScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA21ED9320EF5B2F00C77819 /* FirstScene.cpp */; };
 		CA21ED9A20FCE6C500C77819 /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA21ED9820FCE6C500C77819 /* Utility.cpp */; };
 		CA21EDA02110547900C77819 /* GlobalDefine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA21ED9E2110547900C77819 /* GlobalDefine.cpp */; };
@@ -217,6 +219,10 @@
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CA0475D521C7634500A6B2EA /* LocalNotification_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalNotification_iOS.h; sourceTree = "<group>"; };
+		CA0475D821C7636700A6B2EA /* LocalNotification_iOS.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LocalNotification_iOS.mm; sourceTree = "<group>"; };
+		CA0475DA21C765DE00A6B2EA /* LocalNotificationBase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LocalNotificationBase.cpp; sourceTree = "<group>"; };
+		CA0475DB21C765DE00A6B2EA /* LocalNotificationBase.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LocalNotificationBase.hpp; sourceTree = "<group>"; };
 		CA21ED9320EF5B2F00C77819 /* FirstScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FirstScene.cpp; sourceTree = "<group>"; };
 		CA21ED9420EF5B2F00C77819 /* FirstScene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FirstScene.hpp; sourceTree = "<group>"; };
 		CA21ED9820FCE6C500C77819 /* Utility.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Utility.cpp; sourceTree = "<group>"; };
@@ -491,6 +497,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CA0475D021C760F600A6B2EA /* LocalNotification */,
 				CA4193E02153733A003B1E07 /* Tapjoy */,
 				CA4193D8215323BE003B1E07 /* Utility */,
 				CA21ED8F20EF5B1400C77819 /* Scene */,
@@ -553,6 +560,17 @@
 			name = Icons;
 			path = ios;
 			sourceTree = SOURCE_ROOT;
+		};
+		CA0475D021C760F600A6B2EA /* LocalNotification */ = {
+			isa = PBXGroup;
+			children = (
+				CA0475DA21C765DE00A6B2EA /* LocalNotificationBase.cpp */,
+				CA0475DB21C765DE00A6B2EA /* LocalNotificationBase.hpp */,
+				CA0475D821C7636700A6B2EA /* LocalNotification_iOS.mm */,
+				CA0475D521C7634500A6B2EA /* LocalNotification_iOS.h */,
+			);
+			path = LocalNotification;
+			sourceTree = "<group>";
 		};
 		CA21ED8F20EF5B1400C77819 /* Scene */ = {
 			isa = PBXGroup;
@@ -799,7 +817,9 @@
 				CAD518C221630F5900E1AB1C /* PageIndicator.cpp in Sources */,
 				CA44B18C217EC47A00634DCE /* Utility_NDK.cpp in Sources */,
 				CAD518C8216366C800E1AB1C /* Settings.cpp in Sources */,
+				CA0475D921C7636700A6B2EA /* LocalNotification_iOS.mm in Sources */,
 				CA21EDA02110547900C77819 /* GlobalDefine.cpp in Sources */,
+				CA0475DC21C765DE00A6B2EA /* LocalNotificationBase.cpp in Sources */,
 				CA4193E321537353003B1E07 /* TapjoyManager.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				CAD518B5215C64E300E1AB1C /* GaugeSprite.cpp in Sources */,
