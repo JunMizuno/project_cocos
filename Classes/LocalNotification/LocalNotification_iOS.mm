@@ -46,13 +46,13 @@ bool LocalNotification_iOS::init() {
     return true;
 }
 
-void LocalNotification_iOS::setLocalNotificationSchedule(const std::string& _message, int32_t intervalSeconds, int32_t _tag) {
+void LocalNotification_iOS::setLocalNotificationSchedule(const std::string& _message, int32_t _intervalSeconds, int32_t _tag) {
     if (!isEnabled()) {
         return;
     }
     
     UILocalNotification* notification = [[UILocalNotification alloc] init];
-    notification.fireDate = [[NSDate date] dateByAddingTimeInterval:intervalSeconds];
+    notification.fireDate = [[NSDate date] dateByAddingTimeInterval:_intervalSeconds];
     notification.timeZone = [NSTimeZone defaultTimeZone];
     notification.alertBody = [NSString stringWithUTF8String:_message.c_str()];
     notification.alertAction = @"Open";

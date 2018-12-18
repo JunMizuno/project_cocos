@@ -66,6 +66,7 @@
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
 		CA0475D921C7636700A6B2EA /* LocalNotification_iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA0475D821C7636700A6B2EA /* LocalNotification_iOS.mm */; };
 		CA0475DC21C765DE00A6B2EA /* LocalNotificationBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA0475DA21C765DE00A6B2EA /* LocalNotificationBase.cpp */; };
+		CA0475DF21C877E900A6B2EA /* LocalNotification_Android.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA0475DD21C877E900A6B2EA /* LocalNotification_Android.cpp */; };
 		CA21ED9520EF5B2F00C77819 /* FirstScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA21ED9320EF5B2F00C77819 /* FirstScene.cpp */; };
 		CA21ED9A20FCE6C500C77819 /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA21ED9820FCE6C500C77819 /* Utility.cpp */; };
 		CA21EDA02110547900C77819 /* GlobalDefine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA21ED9E2110547900C77819 /* GlobalDefine.cpp */; };
@@ -223,6 +224,8 @@
 		CA0475D821C7636700A6B2EA /* LocalNotification_iOS.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LocalNotification_iOS.mm; sourceTree = "<group>"; };
 		CA0475DA21C765DE00A6B2EA /* LocalNotificationBase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LocalNotificationBase.cpp; sourceTree = "<group>"; };
 		CA0475DB21C765DE00A6B2EA /* LocalNotificationBase.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LocalNotificationBase.hpp; sourceTree = "<group>"; };
+		CA0475DD21C877E900A6B2EA /* LocalNotification_Android.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LocalNotification_Android.cpp; sourceTree = "<group>"; };
+		CA0475DE21C877E900A6B2EA /* LocalNotification_Android.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LocalNotification_Android.hpp; sourceTree = "<group>"; };
 		CA21ED9320EF5B2F00C77819 /* FirstScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FirstScene.cpp; sourceTree = "<group>"; };
 		CA21ED9420EF5B2F00C77819 /* FirstScene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FirstScene.hpp; sourceTree = "<group>"; };
 		CA21ED9820FCE6C500C77819 /* Utility.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Utility.cpp; sourceTree = "<group>"; };
@@ -568,6 +571,8 @@
 				CA0475DB21C765DE00A6B2EA /* LocalNotificationBase.hpp */,
 				CA0475D821C7636700A6B2EA /* LocalNotification_iOS.mm */,
 				CA0475D521C7634500A6B2EA /* LocalNotification_iOS.h */,
+				CA0475DD21C877E900A6B2EA /* LocalNotification_Android.cpp */,
+				CA0475DE21C877E900A6B2EA /* LocalNotification_Android.hpp */,
 			);
 			path = LocalNotification;
 			sourceTree = "<group>";
@@ -805,6 +810,7 @@
 				CAD518CB21637D3B00E1AB1C /* DisableTouchAreaButton.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				CAD518B8215DC68500E1AB1C /* CommonListView.cpp in Sources */,
+				CA0475DF21C877E900A6B2EA /* LocalNotification_Android.cpp in Sources */,
 				CAD518B2215A0C6800E1AB1C /* EventsSequence.cpp in Sources */,
 				CAD518C52163384300E1AB1C /* ScrollSlider.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,

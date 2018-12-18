@@ -26,6 +26,12 @@ package org.cocos2dx.cpp;
 import android.os.Bundle;
 import org.cocos2dx.lib.Cocos2dxActivity;
 
+// Add for LocalNotification
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.NotificationChannel;
+import android.graphics.Color;
+
 public class AppActivity extends Cocos2dxActivity {
     // Add for Utility_NDK
     private static native void initNDK(Context context);
@@ -52,5 +58,17 @@ public class AppActivity extends Cocos2dxActivity {
 
         // Add for Tapjoy
         setTapjoyActivity(this.getApplicationContext());
+
+        // Add for LocalNotification
+        // 設定画面における通知チャンネルの生成(API26以上、Oreo対応)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODE.O) {
+            NotificationManager manager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
+            // 引数内訳:内部タグ、表示項目、表示プライオリティー
+            NotificationChannel channel = new NotificationChannel("channel_local_notification", "ローカル通知", NotificationManager.IMPORTANCE_DEFAULT);
+            channel.enableLights(true);
+            channel.setLightColor(Color.WHITE);
+            channel.setLockscreenVisiblity(Notification.VISIBLITY_PUBLIC);
+            manager.createNotificationChannel(channel);
+        }
     }
 }

@@ -21,7 +21,7 @@ public:
     ~LocalNotification_iOS();
     
     bool init() override;
-    void setLocalNotificationSchedule(const std::string& _message, int32_t intervalSeconds, int32_t _tag) override;
+    void setLocalNotificationSchedule(const std::string& _message, int32_t _intervalSeconds, int32_t _tag) override;
     void setEnabled(bool _enabled, bool _jumpToNativeSettings = false) override;
     bool isEnabled() override;
     void cancelLocalNotification(int32_t _tag) override;
