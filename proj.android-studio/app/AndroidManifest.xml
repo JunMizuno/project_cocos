@@ -66,8 +66,25 @@
             </intent-filter>
         </receiver>
         <meta-data android:name="com.tapjoy.appstore" android:value="Google"/>
-        <!-- Until Add for Tapjoy -->
+        <!-- Until Here Add for Tapjoy -->
         
+        <!-- Add for URLScheme -->
+        <activity
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:name="org.cocos2dx.cpp.Activity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Decided Scheme Name -->
+                <category android:name="scheme-url" />
+            </intent-filter>
+        </activity>
+        <!-- Until Here Add for URLScheme-->
     </application>
 
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -76,5 +93,5 @@
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <permission android:name="jp.co.jun_mizuno.test_project.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
     <uses-permission android:name="jp.co.jun_mizuno.test_project.permission.C2D_MESSAGE"/>
-    <!-- Until Add for Tapjoy -->
+    <!-- Until Here Add for Tapjoy -->
 </manifest>

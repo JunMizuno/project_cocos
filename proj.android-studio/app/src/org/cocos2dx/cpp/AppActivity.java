@@ -32,6 +32,10 @@ import android.app.NotificationManager;
 import android.app.NotificationChannel;
 import android.graphics.Color;
 
+// Add for URLScheme
+import android.net.Uri;
+import android.util.Log;
+
 public class AppActivity extends Cocos2dxActivity {
     // Add for Utility_NDK
     private static native void initNDK(Context context);
@@ -69,6 +73,15 @@ public class AppActivity extends Cocos2dxActivity {
             channel.setLightColor(Color.WHITE);
             channel.setLockscreenVisiblity(Notification.VISIBLITY_PUBLIC);
             manager.createNotificationChannel(channel);
+        }
+
+        // URLスキーム経由で起動された場合
+        Intent intent = getIntent();
+        String action = intent.getAction();
+        if (Intent.ACTION_VIEW.equals(action)) {
+            Uri uri = intent.getData();
+            String url = uri.toString();
+            URLSchemeEvent.setSchemeURL(url);
         }
     }
 }

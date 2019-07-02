@@ -107,6 +107,7 @@
 		CA41942B21539F87003B1E07 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41942021539F87003B1E07 /* SystemConfiguration.framework */; };
 		CA41942D21539FE2003B1E07 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA41942C21539FE2003B1E07 /* JavaScriptCore.framework */; };
 		CA44B18C217EC47A00634DCE /* Utility_NDK.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA44B18A217EC47A00634DCE /* Utility_NDK.cpp */; };
+		CA7AB4C822CB041D00AB8793 /* URLSchemeEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA7AB4C622CB041D00AB8793 /* URLSchemeEvent.cpp */; };
 		CAD518AC2159E38F00E1AB1C /* json11.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAD518AB2159E38F00E1AB1C /* json11.cpp */; };
 		CAD518AF215A011300E1AB1C /* SequenceEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAD518AD215A011300E1AB1C /* SequenceEvent.cpp */; };
 		CAD518B2215A0C6800E1AB1C /* EventsSequence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAD518B0215A0C6800E1AB1C /* EventsSequence.cpp */; };
@@ -277,6 +278,8 @@
 		CA41942C21539FE2003B1E07 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		CA44B18A217EC47A00634DCE /* Utility_NDK.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Utility_NDK.cpp; sourceTree = "<group>"; };
 		CA44B18B217EC47A00634DCE /* Utility_NDK.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Utility_NDK.hpp; sourceTree = "<group>"; };
+		CA7AB4C622CB041D00AB8793 /* URLSchemeEvent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = URLSchemeEvent.cpp; sourceTree = "<group>"; };
+		CA7AB4C722CB041D00AB8793 /* URLSchemeEvent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = URLSchemeEvent.hpp; sourceTree = "<group>"; };
 		CAD518AA2159E38F00E1AB1C /* json11.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = json11.hpp; sourceTree = "<group>"; };
 		CAD518AB2159E38F00E1AB1C /* json11.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json11.cpp; sourceTree = "<group>"; };
 		CAD518AD215A011300E1AB1C /* SequenceEvent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SequenceEvent.cpp; sourceTree = "<group>"; };
@@ -500,6 +503,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CA7AB4C422CB03E200AB8793 /* URLSchemeEvent */,
 				CA0475D021C760F600A6B2EA /* LocalNotification */,
 				CA4193E02153733A003B1E07 /* Tapjoy */,
 				CA4193D8215323BE003B1E07 /* Utility */,
@@ -637,6 +641,15 @@
 				CA4193EE215381A1003B1E07 /* MyTJSpendCurrencyListener.hpp */,
 			);
 			path = Tapjoy;
+			sourceTree = "<group>";
+		};
+		CA7AB4C422CB03E200AB8793 /* URLSchemeEvent */ = {
+			isa = PBXGroup;
+			children = (
+				CA7AB4C622CB041D00AB8793 /* URLSchemeEvent.cpp */,
+				CA7AB4C722CB041D00AB8793 /* URLSchemeEvent.hpp */,
+			);
+			path = URLSchemeEvent;
 			sourceTree = "<group>";
 		};
 		CAD518A52159E0ED00E1AB1C /* json11 */ = {
@@ -824,6 +837,7 @@
 				CA44B18C217EC47A00634DCE /* Utility_NDK.cpp in Sources */,
 				CAD518C8216366C800E1AB1C /* Settings.cpp in Sources */,
 				CA0475D921C7636700A6B2EA /* LocalNotification_iOS.mm in Sources */,
+				CA7AB4C822CB041D00AB8793 /* URLSchemeEvent.cpp in Sources */,
 				CA21EDA02110547900C77819 /* GlobalDefine.cpp in Sources */,
 				CA0475DC21C765DE00A6B2EA /* LocalNotificationBase.cpp in Sources */,
 				CA4193E321537353003B1E07 /* TapjoyManager.cpp in Sources */,
