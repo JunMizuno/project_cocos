@@ -70,6 +70,21 @@
 		CA21ED9520EF5B2F00C77819 /* FirstScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA21ED9320EF5B2F00C77819 /* FirstScene.cpp */; };
 		CA21ED9A20FCE6C500C77819 /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA21ED9820FCE6C500C77819 /* Utility.cpp */; };
 		CA21EDA02110547900C77819 /* GlobalDefine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA21ED9E2110547900C77819 /* GlobalDefine.cpp */; };
+		CA33F3A522FA58EF0007E365 /* AdjustManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA33F3A322FA58EF0007E365 /* AdjustManager.cpp */; };
+		CA33F3C022FA5C450007E365 /* ADJEvent2dx.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA33F3A822FA5C420007E365 /* ADJEvent2dx.mm */; };
+		CA33F3C122FA5C450007E365 /* AdjustSessionSuccess2dx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA33F3AC22FA5C420007E365 /* AdjustSessionSuccess2dx.cpp */; };
+		CA33F3C222FA5C450007E365 /* AdjustProxy2dx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA33F3B022FA5C430007E365 /* AdjustProxy2dx.cpp */; };
+		CA33F3C322FA5C450007E365 /* AdjustSessionFailure2dx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA33F3B122FA5C430007E365 /* AdjustSessionFailure2dx.cpp */; };
+		CA33F3C422FA5C450007E365 /* AdjustEventSuccess2dx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA33F3B222FA5C430007E365 /* AdjustEventSuccess2dx.cpp */; };
+		CA33F3C522FA5C450007E365 /* AdjustAttribution2dx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA33F3B322FA5C430007E365 /* AdjustAttribution2dx.cpp */; };
+		CA33F3C622FA5C450007E365 /* ADJConfig2dx.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA33F3B422FA5C430007E365 /* ADJConfig2dx.mm */; };
+		CA33F3C722FA5C450007E365 /* AdjustEvent2dx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA33F3B822FA5C440007E365 /* AdjustEvent2dx.cpp */; };
+		CA33F3C822FA5C450007E365 /* ADJAdjust2dx.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA33F3B922FA5C440007E365 /* ADJAdjust2dx.mm */; };
+		CA33F3C922FA5C450007E365 /* ADJDelegate2dx.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA33F3BB22FA5C440007E365 /* ADJDelegate2dx.mm */; };
+		CA33F3CA22FA5C450007E365 /* AdjustEventFailure2dx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA33F3BC22FA5C440007E365 /* AdjustEventFailure2dx.cpp */; };
+		CA33F3CB22FA5C450007E365 /* AdjustConfig2dx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA33F3BD22FA5C440007E365 /* AdjustConfig2dx.cpp */; };
+		CA33F3CC22FA5C450007E365 /* Adjust2dx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA33F3BE22FA5C440007E365 /* Adjust2dx.cpp */; };
+		CA33F3CE22FA5E630007E365 /* AdjustSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA33F3CD22FA5E620007E365 /* AdjustSdk.framework */; };
 		CA4193DC215323E8003B1E07 /* DrawCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4193DA215323E8003B1E07 /* DrawCircle.cpp */; };
 		CA4193DF2153681C003B1E07 /* ProgressTimerSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4193DD2153681C003B1E07 /* ProgressTimerSprite.cpp */; };
 		CA4193E321537353003B1E07 /* TapjoyManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA4193E121537353003B1E07 /* TapjoyManager.cpp */; };
@@ -233,6 +248,35 @@
 		CA21ED9920FCE6C500C77819 /* Utility.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Utility.hpp; sourceTree = "<group>"; };
 		CA21ED9E2110547900C77819 /* GlobalDefine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GlobalDefine.cpp; sourceTree = "<group>"; };
 		CA21ED9F2110547900C77819 /* GlobalDefine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GlobalDefine.hpp; sourceTree = "<group>"; };
+		CA33F3A322FA58EF0007E365 /* AdjustManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AdjustManager.cpp; sourceTree = "<group>"; };
+		CA33F3A422FA58EF0007E365 /* AdjustManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AdjustManager.hpp; sourceTree = "<group>"; };
+		CA33F3A622FA5C420007E365 /* AdjustAttribution2dx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdjustAttribution2dx.h; sourceTree = "<group>"; };
+		CA33F3A722FA5C420007E365 /* ADJDelegate2dx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADJDelegate2dx.h; sourceTree = "<group>"; };
+		CA33F3A822FA5C420007E365 /* ADJEvent2dx.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ADJEvent2dx.mm; sourceTree = "<group>"; };
+		CA33F3A922FA5C420007E365 /* AdjustEvent2dx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdjustEvent2dx.h; sourceTree = "<group>"; };
+		CA33F3AA22FA5C420007E365 /* AdjustEventSuccess2dx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdjustEventSuccess2dx.h; sourceTree = "<group>"; };
+		CA33F3AB22FA5C420007E365 /* ADJEvent2dx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADJEvent2dx.h; sourceTree = "<group>"; };
+		CA33F3AC22FA5C420007E365 /* AdjustSessionSuccess2dx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AdjustSessionSuccess2dx.cpp; sourceTree = "<group>"; };
+		CA33F3AD22FA5C420007E365 /* ADJConfig2dx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADJConfig2dx.h; sourceTree = "<group>"; };
+		CA33F3AE22FA5C420007E365 /* AdjustConfig2dx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdjustConfig2dx.h; sourceTree = "<group>"; };
+		CA33F3AF22FA5C430007E365 /* ADJAdjust2dx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADJAdjust2dx.h; sourceTree = "<group>"; };
+		CA33F3B022FA5C430007E365 /* AdjustProxy2dx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AdjustProxy2dx.cpp; sourceTree = "<group>"; };
+		CA33F3B122FA5C430007E365 /* AdjustSessionFailure2dx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AdjustSessionFailure2dx.cpp; sourceTree = "<group>"; };
+		CA33F3B222FA5C430007E365 /* AdjustEventSuccess2dx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AdjustEventSuccess2dx.cpp; sourceTree = "<group>"; };
+		CA33F3B322FA5C430007E365 /* AdjustAttribution2dx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AdjustAttribution2dx.cpp; sourceTree = "<group>"; };
+		CA33F3B422FA5C430007E365 /* ADJConfig2dx.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ADJConfig2dx.mm; sourceTree = "<group>"; };
+		CA33F3B522FA5C430007E365 /* Adjust2dx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Adjust2dx.h; sourceTree = "<group>"; };
+		CA33F3B622FA5C430007E365 /* AdjustSessionFailure2dx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdjustSessionFailure2dx.h; sourceTree = "<group>"; };
+		CA33F3B722FA5C430007E365 /* AdjustProxy2dx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdjustProxy2dx.h; sourceTree = "<group>"; };
+		CA33F3B822FA5C440007E365 /* AdjustEvent2dx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AdjustEvent2dx.cpp; sourceTree = "<group>"; };
+		CA33F3B922FA5C440007E365 /* ADJAdjust2dx.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ADJAdjust2dx.mm; sourceTree = "<group>"; };
+		CA33F3BA22FA5C440007E365 /* AdjustSessionSuccess2dx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdjustSessionSuccess2dx.h; sourceTree = "<group>"; };
+		CA33F3BB22FA5C440007E365 /* ADJDelegate2dx.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ADJDelegate2dx.mm; sourceTree = "<group>"; };
+		CA33F3BC22FA5C440007E365 /* AdjustEventFailure2dx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AdjustEventFailure2dx.cpp; sourceTree = "<group>"; };
+		CA33F3BD22FA5C440007E365 /* AdjustConfig2dx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AdjustConfig2dx.cpp; sourceTree = "<group>"; };
+		CA33F3BE22FA5C440007E365 /* Adjust2dx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Adjust2dx.cpp; sourceTree = "<group>"; };
+		CA33F3BF22FA5C440007E365 /* AdjustEventFailure2dx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdjustEventFailure2dx.h; sourceTree = "<group>"; };
+		CA33F3CD22FA5E620007E365 /* AdjustSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdjustSdk.framework; path = AdjustSdk/AdjustSdk.framework; sourceTree = "<group>"; };
 		CA4193DA215323E8003B1E07 /* DrawCircle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DrawCircle.cpp; sourceTree = "<group>"; };
 		CA4193DB215323E8003B1E07 /* DrawCircle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DrawCircle.hpp; sourceTree = "<group>"; };
 		CA4193DD2153681C003B1E07 /* ProgressTimerSprite.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ProgressTimerSprite.cpp; sourceTree = "<group>"; };
@@ -316,6 +360,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA33F3CE22FA5E630007E365 /* AdjustSdk.framework in Frameworks */,
 				CA41942D21539FE2003B1E07 /* JavaScriptCore.framework in Frameworks */,
 				CA41942121539F87003B1E07 /* WebKit.framework in Frameworks */,
 				CA41942221539F87003B1E07 /* Social.framework in Frameworks */,
@@ -435,6 +480,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA33F3CD22FA5E620007E365 /* AdjustSdk.framework */,
 				CA41942C21539FE2003B1E07 /* JavaScriptCore.framework */,
 				CA41941C21539F87003B1E07 /* MessageUI.framework */,
 				CA41941921539F87003B1E07 /* MobileCoreServices.framework */,
@@ -503,6 +549,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CA33F3A122FA58CF0007E365 /* Adjust */,
 				CA7AB4C422CB03E200AB8793 /* URLSchemeEvent */,
 				CA0475D021C760F600A6B2EA /* LocalNotification */,
 				CA4193E02153733A003B1E07 /* Tapjoy */,
@@ -588,6 +635,41 @@
 				CA21ED9420EF5B2F00C77819 /* FirstScene.hpp */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		CA33F3A122FA58CF0007E365 /* Adjust */ = {
+			isa = PBXGroup;
+			children = (
+				CA33F3AF22FA5C430007E365 /* ADJAdjust2dx.h */,
+				CA33F3B922FA5C440007E365 /* ADJAdjust2dx.mm */,
+				CA33F3AD22FA5C420007E365 /* ADJConfig2dx.h */,
+				CA33F3B422FA5C430007E365 /* ADJConfig2dx.mm */,
+				CA33F3A722FA5C420007E365 /* ADJDelegate2dx.h */,
+				CA33F3BB22FA5C440007E365 /* ADJDelegate2dx.mm */,
+				CA33F3AB22FA5C420007E365 /* ADJEvent2dx.h */,
+				CA33F3A822FA5C420007E365 /* ADJEvent2dx.mm */,
+				CA33F3BE22FA5C440007E365 /* Adjust2dx.cpp */,
+				CA33F3B522FA5C430007E365 /* Adjust2dx.h */,
+				CA33F3B322FA5C430007E365 /* AdjustAttribution2dx.cpp */,
+				CA33F3A622FA5C420007E365 /* AdjustAttribution2dx.h */,
+				CA33F3BD22FA5C440007E365 /* AdjustConfig2dx.cpp */,
+				CA33F3AE22FA5C420007E365 /* AdjustConfig2dx.h */,
+				CA33F3B822FA5C440007E365 /* AdjustEvent2dx.cpp */,
+				CA33F3A922FA5C420007E365 /* AdjustEvent2dx.h */,
+				CA33F3BC22FA5C440007E365 /* AdjustEventFailure2dx.cpp */,
+				CA33F3BF22FA5C440007E365 /* AdjustEventFailure2dx.h */,
+				CA33F3B222FA5C430007E365 /* AdjustEventSuccess2dx.cpp */,
+				CA33F3AA22FA5C420007E365 /* AdjustEventSuccess2dx.h */,
+				CA33F3B022FA5C430007E365 /* AdjustProxy2dx.cpp */,
+				CA33F3B722FA5C430007E365 /* AdjustProxy2dx.h */,
+				CA33F3B122FA5C430007E365 /* AdjustSessionFailure2dx.cpp */,
+				CA33F3B622FA5C430007E365 /* AdjustSessionFailure2dx.h */,
+				CA33F3AC22FA5C420007E365 /* AdjustSessionSuccess2dx.cpp */,
+				CA33F3BA22FA5C440007E365 /* AdjustSessionSuccess2dx.h */,
+				CA33F3A322FA58EF0007E365 /* AdjustManager.cpp */,
+				CA33F3A422FA58EF0007E365 /* AdjustManager.hpp */,
+			);
+			path = Adjust;
 			sourceTree = "<group>";
 		};
 		CA4193D8215323BE003B1E07 /* Utility */ = {
@@ -817,34 +899,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA33F3C222FA5C450007E365 /* AdjustProxy2dx.cpp in Sources */,
+				CA33F3C822FA5C450007E365 /* ADJAdjust2dx.mm in Sources */,
 				CAD518CF216495B000E1AB1C /* ClippingView.cpp in Sources */,
 				CA21ED9A20FCE6C500C77819 /* Utility.cpp in Sources */,
 				CA4193EF215381A1003B1E07 /* MyTJSpendCurrencyListener.cpp in Sources */,
+				CA33F3C622FA5C450007E365 /* ADJConfig2dx.mm in Sources */,
 				CAD518CB21637D3B00E1AB1C /* DisableTouchAreaButton.cpp in Sources */,
+				CA33F3C122FA5C450007E365 /* AdjustSessionSuccess2dx.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				CAD518B8215DC68500E1AB1C /* CommonListView.cpp in Sources */,
 				CA0475DF21C877E900A6B2EA /* LocalNotification_Android.cpp in Sources */,
 				CAD518B2215A0C6800E1AB1C /* EventsSequence.cpp in Sources */,
+				CA33F3A522FA58EF0007E365 /* AdjustManager.cpp in Sources */,
+				CA33F3C522FA5C450007E365 /* AdjustAttribution2dx.cpp in Sources */,
 				CAD518C52163384300E1AB1C /* ScrollSlider.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				CA4193E9215380F0003B1E07 /* MyTJPlacementListener.cpp in Sources */,
+				CA33F3C022FA5C450007E365 /* ADJEvent2dx.mm in Sources */,
 				CAD518AF215A011300E1AB1C /* SequenceEvent.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				CA33F3C322FA5C450007E365 /* AdjustSessionFailure2dx.cpp in Sources */,
 				CA4193E62153807A003B1E07 /* MyTJConnectListener.cpp in Sources */,
 				CAD518AC2159E38F00E1AB1C /* json11.cpp in Sources */,
+				CA33F3C722FA5C450007E365 /* AdjustEvent2dx.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				CAD518C221630F5900E1AB1C /* PageIndicator.cpp in Sources */,
+				CA33F3CC22FA5C450007E365 /* Adjust2dx.cpp in Sources */,
 				CA44B18C217EC47A00634DCE /* Utility_NDK.cpp in Sources */,
 				CAD518C8216366C800E1AB1C /* Settings.cpp in Sources */,
 				CA0475D921C7636700A6B2EA /* LocalNotification_iOS.mm in Sources */,
 				CA7AB4C822CB041D00AB8793 /* URLSchemeEvent.cpp in Sources */,
 				CA21EDA02110547900C77819 /* GlobalDefine.cpp in Sources */,
+				CA33F3CB22FA5C450007E365 /* AdjustConfig2dx.cpp in Sources */,
 				CA0475DC21C765DE00A6B2EA /* LocalNotificationBase.cpp in Sources */,
 				CA4193E321537353003B1E07 /* TapjoyManager.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				CA33F3CA22FA5C450007E365 /* AdjustEventFailure2dx.cpp in Sources */,
 				CAD518B5215C64E300E1AB1C /* GaugeSprite.cpp in Sources */,
+				CA33F3C922FA5C450007E365 /* ADJDelegate2dx.mm in Sources */,
 				CA21ED9520EF5B2F00C77819 /* FirstScene.cpp in Sources */,
 				CA4193DC215323E8003B1E07 /* DrawCircle.cpp in Sources */,
+				CA33F3C422FA5C450007E365 /* AdjustEventSuccess2dx.cpp in Sources */,
 				CAD518BC216225A800E1AB1C /* GameDataManager.cpp in Sources */,
 				CA4193EC21538160003B1E07 /* MyTJGetCurrencyBalanceListener.cpp in Sources */,
 				CA4193DF2153681C003B1E07 /* ProgressTimerSprite.cpp in Sources */,
@@ -887,6 +983,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Tapjoy.embeddedframework",
+					"$(PROJECT_DIR)/AdjustSdk",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -924,6 +1021,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Tapjoy.embeddedframework",
+					"$(PROJECT_DIR)/AdjustSdk",
 				);
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

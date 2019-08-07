@@ -13,7 +13,16 @@ LOCAL_MODULE_FILENAME := libMyGame
 
 LOCAL_SRC_FILES := $(LOCAL_PATH)/hellocpp/main.cpp \
                    $(LOCAL_PATH)/../../../Classes/AppDelegate.cpp \
-                   $(LOCAL_PATH)/../../../Classes/HelloWorldScene.cpp
+                   $(LOCAL_PATH)/../../../Classes/HelloWorldScene.cpp \
+                   $(LOCAL_PATH)/../../../Classes/Adjust/AdjustConfig2dx.cpp \
+                   $(LOCAL_PATH)/../../../Classes/Adjust/AdjustAttribution2dx.cpp \
+                   $(LOCAL_PATH)/../../../Classes/Adjust/AdjustProxy2dx.cpp \
+                   $(LOCAL_PATH)/../../../Classes/Adjust/AdjustEvent2dx.cpp \
+                   $(LOCAL_PATH)/../../../Classes/Adjust/Adjust2dx.cpp \
+                   $(LOCAL_PATH)/../../../Classes/Adjust/AdjustEventFailure2dx.cpp \
+                   $(LOCAL_PATH)/../../../Classes/Adjust/AdjustEventSuccess2dx.cpp \
+                   $(LOCAL_PATH)/../../../Classes/Adjust/AdjustSessionFailure2dx.cpp \
+                   $(LOCAL_PATH)/../../../Classes/Adjust/AdjustSessionSuccess2dx.cpp
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../../Classes
 

@@ -10,7 +10,7 @@
 using namespace tapjoy;
 USING_NS_CC;
 
-static TapjoyManager* gSaredInstance_ = nullptr;
+static TapjoyManager* gSharedInstance_ = nullptr;
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
 std::string TAPJOY_CONNECT_KEY = "";
@@ -34,15 +34,15 @@ TapjoyManager::TapjoyManager() {
 }
 
 TapjoyManager::~TapjoyManager() {
-    CC_SAFE_DELETE(gSaredInstance_);
+    CC_SAFE_DELETE(gSharedInstance_);
 }
 
 TapjoyManager* TapjoyManager::getInstance() {
-    if (!gSaredInstance_) {
-        gSaredInstance_ = new (std::nothrow)TapjoyManager();
+    if (!gSharedInstance_) {
+        gSharedInstance_ = new (std::nothrow)TapjoyManager();
     }
     
-    return gSaredInstance_;
+    return gSharedInstance_;
 }
 
 /**
