@@ -6,6 +6,7 @@
 //
 
 #include "AdjustManager.hpp"
+#include "Adjust2dx.h"
 
 static AdjustManager* gSharedInstance_ = nullptr;
 
@@ -25,4 +26,33 @@ AdjustManager* AdjustManager::getInstance() {
     }
     
     return gSharedInstance_;
+}
+
+void AdjustManager::init() {
+    std::string appToken = "";
+    std::string enviroment = AdjustEnvironmentSandbox2dx;
+#ifdef RELEASE_BUILD
+    enviroment = AdjustEnvironmentProduction2dx;
+#endif
+    
+    AdjustConfig2dx adjustConfig = AdjustConfig2dx(appToken, enviroment);
+    Adjust2dx::start(adjustConfig);
+}
+
+void AdjustManager::onPause() {
+    Adjust2dx::onPause();
+}
+
+void AdjustManager::onResume() {
+    Adjust2dx::onResume();
+}
+
+void AdjustManager::setTrackEvent(const std::string& eventToken, const std::string& transactionIndex) {
+    AdjustEvent2dx adjustEvent = AdjustEvent2dx(eventToken);
+    
+    if (!transactionIndex.empty()) {
+        adjustEvent.setTransactionId(transactionIndex);
+    }
+    
+    Adjust2dx::trackEvent(adjustEvent);
 }

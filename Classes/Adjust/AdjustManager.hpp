@@ -15,9 +15,14 @@ private:
     AdjustManager();
     ~AdjustManager();
 
+    void setTrackEvent(const std::string& eventToken, const std::string& transactionIndex = "");
+    
 public:
     static AdjustManager* getInstance();
     
+    void init();
+    void onPause();
+    void onResume();
 };
 
 #endif /* AdjustManager_hpp */
